@@ -2,10 +2,10 @@
   
     
         "post0": {
-            "title": "Title",
+            "title": "Python Hello",
             "content": "print(&quot;Hello&quot;) . Hello .",
-            "url": "https://aidanywu.github.io/fastpages/2022/08/21/pythonhi.html",
-            "relUrl": "/2022/08/21/pythonhi.html",
+            "url": "https://aidanywu.github.io/fastpages/jupyter/2022/08/21/pythonhi.html",
+            "relUrl": "/jupyter/2022/08/21/pythonhi.html",
             "date": " • Aug 21, 2022"
         }
         
@@ -24,10 +24,10 @@
   
     
         ,"post2": {
-            "title": "Title",
+            "title": "Java Hello",
             "content": "System.out.println(&quot;Hello&quot;) . Hello .",
-            "url": "https://aidanywu.github.io/fastpages/2022/08/21/javahi.html",
-            "relUrl": "/2022/08/21/javahi.html",
+            "url": "https://aidanywu.github.io/fastpages/jupyter/2022/08/21/javahi.html",
+            "relUrl": "/jupyter/2022/08/21/javahi.html",
             "date": " • Aug 21, 2022"
         }
         
