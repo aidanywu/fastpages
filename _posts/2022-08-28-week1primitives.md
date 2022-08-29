@@ -13,4 +13,4 @@ title: Week 1 Innovation -- Primitives
 # Productive Blogging
 * [Demonstrating Java primitives knowledge](https://aidanywu.github.io/fastpages/jupyter/2022/08/28/javaunitcon.html)
 * [Using Bash to check for key tools installation](https://aidanywu.github.io/fastpages/jupyter/2022/08/28/keytoolsbash.html)
-* [College Board Unit notes](https://aidanywu.github.io/fastpages/markdown/2022/08/28/markdownhtmlpost.html)
+* [College Board Unit notes](https://aidanywu.github.io/fastpages/markdown/2022/08/28/cb1-10.html)
