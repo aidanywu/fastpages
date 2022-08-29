@@ -3,6 +3,7 @@ toc: true
 layout: post
 description: Week 1 tangibles
 categories: [markdown]
+comments: true
 title: Week 1 Innovation -- Primitives
 ---
 # Code.org
