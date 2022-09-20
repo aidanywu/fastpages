@@ -13,10 +13,10 @@
   
     
         ,"post1": {
-            "title": "Free Response Question No. 1",
-            "content": "2021 FRQ 1 . 1) . a) . public class WordMatch { /** The secret string. */ private String secret; /** Constructs a WordMatch object with the given secret string of lowercase letters. */ public WordMatch (String word) { /* implementation not shown */ } /** Returns a score for guess, as described in part (a). * Precondition: 0 &lt; guess.length() &lt;= secret.length() */ public int scoreGuess (String guess) { int score = 0; for (int i = 0; i &lt; secret.length()-guess.length(); i++) { if (secret.substring(i + guess.length()).equals(guess)) { score++; } } return score * guess.length() * guess.length(); } public String findBetterGuess (String guess1, String guess2) { // part b } } . Comments . I had to google how to do substring in java but that was the only hard part . b) . public class WordMatch { /** The secret string. */ private String secret; /** Constructs a WordMatch object with the given secret string of lowercase letters. */ public WordMatch (String word) { /* implementation not shown */ } /** Returns a score for guess, as described in part (a). * Precondition: 0 &lt; guess.length() &lt;= secret.length() */ public int scoreGuess (String guess) { // part a } public String findBetterGuess (String guess1, String guess2) { if (scoreGuess(guess1) &gt; scoreGuess(guess2)) { return guess1; } else if (scoreGuess(guess1) &lt; scoreGuess(guess2)) { return guess2; } else if (guess1.compareTo(guess2) &gt; 0) { return guess1; } } } . Comments . The first two ifs were very simple but the alphabetical condition was a little more difficult. I didn&#39;t know how to compare effectively in Java and I had to google, find out about the compareTo() function, then learn what it does. .",
-            "url": "https://aidanywu.github.io/fastpages/jupyter/2022/09/18/frq1.html",
-            "relUrl": "/jupyter/2022/09/18/frq1.html",
+            "title": "Week 3 Free Response Question No. 1",
+            "content": "FRQ . FRQ | . Iteration Mini-lab . Iteration Mini-lab | .",
+            "url": "https://aidanywu.github.io/fastpages/markdown/2022/09/18/frq1.html",
+            "relUrl": "/markdown/2022/09/18/frq1.html",
             "date": " • Sep 18, 2022"
         }
         
