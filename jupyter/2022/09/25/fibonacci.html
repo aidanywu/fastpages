@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      12 min read
+      13 min read
     
 </span></p>
 
@@ -228,14 +228,10 @@ window.onload = wrap_img;
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
         <span class="kd">super</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="s">&quot;For&quot;</span><span class="p">;</span>
         <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="kd">super</span><span class="p">.</span><span class="na">size</span><span class="p">;</span>
-        <span class="kt">int</span> <span class="n">n1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="kt">int</span> <span class="n">n2</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-        <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">long</span><span class="o">[]</span> <span class="n">previous</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">long</span><span class="o">[]</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">};</span>
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">count</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="kd">super</span><span class="p">.</span><span class="na">setData</span><span class="p">(</span><span class="n">n1</span><span class="p">);</span>
-            <span class="n">sum</span> <span class="o">=</span> <span class="n">n1</span> <span class="o">+</span> <span class="n">n2</span><span class="p">;</span>
-            <span class="n">n1</span> <span class="o">=</span> <span class="n">n2</span><span class="p">;</span>
-            <span class="n">n2</span> <span class="o">=</span> <span class="n">sum</span><span class="p">;</span>
+            <span class="kd">super</span><span class="p">.</span><span class="na">setData</span><span class="p">(</span><span class="n">previous</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span>
+            <span class="n">previous</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">long</span><span class="o">[]</span> <span class="p">{</span><span class="n">previous</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span> <span class="n">previous</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">+</span> <span class="n">previous</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">};</span>
         <span class="p">}</span>
     <span class="p">}</span>
     <span class="kd">static</span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
@@ -284,7 +280,7 @@ fibonacci Sequence 18 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377,
 fibonacci Sequence 19 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584]
 fibonacci Sequence 20 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181]
 
-Time: 32423 ns
+Time: 25516 ns
 </pre>
 </div>
 </div>
@@ -312,14 +308,10 @@ Time: 32423 ns
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
         <span class="kd">super</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="s">&quot;While&quot;</span><span class="p">;</span>
         <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="kt">int</span> <span class="n">n1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="kt">int</span> <span class="n">n2</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-        <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">long</span><span class="o">[]</span> <span class="n">previous</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">long</span><span class="o">[]</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">};</span>
         <span class="k">while</span> <span class="p">(</span><span class="n">count</span> <span class="o">&lt;</span> <span class="kd">super</span><span class="p">.</span><span class="na">size</span><span class="p">)</span> <span class="p">{</span>
-            <span class="kd">super</span><span class="p">.</span><span class="na">setData</span><span class="p">(</span><span class="n">n1</span><span class="p">);</span>
-            <span class="n">sum</span> <span class="o">=</span> <span class="n">n1</span> <span class="o">+</span> <span class="n">n2</span><span class="p">;</span>
-            <span class="n">n1</span> <span class="o">=</span> <span class="n">n2</span><span class="p">;</span>
-            <span class="n">n2</span> <span class="o">=</span> <span class="n">sum</span><span class="p">;</span>
+            <span class="kd">super</span><span class="p">.</span><span class="na">setData</span><span class="p">(</span><span class="n">previous</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span>
+            <span class="n">previous</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">long</span><span class="o">[]</span> <span class="p">{</span><span class="n">previous</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span> <span class="n">previous</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">+</span> <span class="n">previous</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">};</span>
             <span class="n">count</span><span class="o">++</span><span class="p">;</span>
         <span class="p">}</span>
     <span class="p">}</span>
@@ -369,7 +361,7 @@ fibonacci Sequence 18 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377,
 fibonacci Sequence 19 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584]
 fibonacci Sequence 20 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181]
 
-Time: 23436 ns
+Time: 22121 ns
 </pre>
 </div>
 </div>
@@ -394,15 +386,16 @@ Time: 23436 ns
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">FibR</span> <span class="kd">extends</span> <span class="n">Fibo</span> <span class="p">{</span>
-    <span class="kd">private</span> <span class="kt">long</span> <span class="nf">getFib</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="n">n</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="k">return</span> <span class="n">getFib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">getFib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">);</span>
-    <span class="p">}</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="kd">super</span><span class="p">.</span><span class="na">size</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="kd">super</span><span class="p">.</span><span class="na">setData</span><span class="p">(</span><span class="n">getFib</span><span class="p">(</span><span class="n">i</span><span class="p">));</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">init</span><span class="p">(</span><span class="kd">super</span><span class="p">.</span><span class="na">size</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kt">long</span><span class="o">[]</span> <span class="n">previous</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">long</span><span class="o">[]</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">};</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">init</span><span class="p">(</span><span class="kt">int</span> <span class="n">count</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">count</span> <span class="o">&lt;</span> <span class="kd">super</span><span class="p">.</span><span class="na">size</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kd">super</span><span class="p">.</span><span class="na">setData</span><span class="p">(</span><span class="n">previous</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span>
+            <span class="n">previous</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">long</span><span class="o">[]</span> <span class="p">{</span><span class="n">previous</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span> <span class="n">previous</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">+</span> <span class="n">previous</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">};</span>
+            <span class="n">count</span><span class="o">++</span><span class="p">;</span>
+            <span class="k">this</span><span class="p">.</span><span class="na">init</span><span class="p">(</span><span class="n">count</span><span class="p">);</span>
         <span class="p">}</span>
     <span class="p">}</span>
     <span class="kd">static</span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
@@ -451,7 +444,7 @@ fibonacci Sequence 18 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377,
 fibonacci Sequence 19 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584]
 fibonacci Sequence 20 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181]
 
-Time: 27879 ns
+Time: 45347 ns
 </pre>
 </div>
 </div>
@@ -465,9 +458,11 @@ Time: 27879 ns
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="CollegeBoard-Standards">CollegeBoard Standards<a class="anchor-link" href="#CollegeBoard-Standards"> </a></h1><p>Skill 1.B: Determine code that would be used to complete code segments (ie For, While, Recursion)
-We used for, while, and recursion in init() of the subclasses to create the Fibonacci sequence</p>
-<p>Skill 4.C: Determine if two or more code segments yield equivalent results (be sure to Discuss how you know results are the same)</p>
-<p>Skill 5.A: Describe the behavior of a given segment of program code (describe the difference in recursion versus for &amp; while loops, perhaps add timing to determine speed)</p>
+We used for, while, and recursion in init() of the subclasses to create the Fibonacci sequence.</p>
+<p>Skill 4.C: Determine if two or more code segments yield equivalent results (be sure to Discuss how you know results are the same)
+If both the for and while loop starts at the same number and add 1 until it reaches the same conditional, and the same code block is ran every time, we can determine that the two or more code segments yield equivalent results. In our for loop, we defined i with the same number as count in while, 0. The conditional for both was run when the the index is less than the size. They both also increased by 1 every time the code is ran.</p>
+<p>Skill 5.A: Describe the behavior of a given segment of program code (describe the difference in recursion versus for &amp; while loops, perhaps add timing to determine speed)
+For and while loops repeat the same code block until a condition is evaluated to false. In recursion, the function is recalling itself within its code repeatedly and not just repeating from start to end.</p>
 
 </div>
 </div>
