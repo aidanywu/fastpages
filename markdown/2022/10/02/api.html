@@ -128,7 +128,7 @@ const options = {
 };
 
   // fetch the API
-  fetch(url, options)
+  fetch("https://us-states.p.rapidapi.com/basic", options)
     // response is a RESTful "promise" on any successful fetch
     .then(response => {
       // check for response errors
@@ -145,7 +145,7 @@ const options = {
       // valid response will have json data
       response.json().then(data => {
           // Country data
-          for (const row of data.countries_stat) {
+          for (const row of data) {
             console.log(row);
 
             // tr for each row
