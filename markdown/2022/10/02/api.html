@@ -145,6 +145,7 @@ const options = {
       // valid response will have json data
       response.json().then(data => {
           // Country data
+          console.log(data);
           for (const row of data) {
             console.log(row);
 
@@ -166,7 +167,7 @@ const options = {
 
             // this build td's into tr
             tr.appendChild(name);
-            tr.appendChild(potsal);
+            tr.appendChild(postal);
             tr.appendChild(capital);
             tr.appendChild(population);
             tr.appendChild(popdensity);
