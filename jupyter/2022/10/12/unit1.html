@@ -131,8 +131,7 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kt">double</span> <span class="nf">purchasePrice</span> <span class="p">()</span> <span class="p">{</span>
-    <span class="kt">double</span> <span class="n">taxTotal</span> <span class="o">=</span> <span class="n">getListPrice</span><span class="p">()</span> <span class="o">*</span> <span class="n">taxRate</span><span class="p">;</span>
-    <span class="k">return</span> <span class="n">taxTotal</span> <span class="o">+</span> <span class="n">getListPrice</span><span class="p">();</span>
+    <span class="k">return</span> <span class="n">getListPrice</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">taxRate</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -157,24 +156,11 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kt">int</span> <span class="nf">compareCustomer</span> <span class="p">(</span><span class="n">Customer</span> <span class="n">other</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="n">getName</span><span class="p">().</span><span class="na">compareTo</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
-
-    <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="n">c</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">compare</span> <span class="o">=</span> <span class="n">getName</span><span class="p">().</span><span class="na">compareTo</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">compare</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">compare</span> <span class="o">=</span> <span class="n">getID</span><span class="p">()</span> <span class="o">-</span> <span class="n">other</span><span class="p">.</span><span class="na">getID</span><span class="p">();</span>
     <span class="p">}</span>
-    <span class="k">else</span> <span class="p">{</span>
-        <span class="kt">int</span> <span class="n">rd</span> <span class="o">=</span> <span class="n">other</span><span class="p">.</span><span class="na">getID</span><span class="p">();</span>
-        
-        <span class="k">if</span> <span class="p">(</span><span class="n">getID</span><span class="p">()</span> <span class="o">=</span> <span class="n">rd</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">getID</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">rd</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="k">else</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">compare</span>
 <span class="p">}</span>
 </pre></div>
 

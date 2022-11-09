@@ -135,13 +135,11 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kt">int</span> <span class="nf">scoreGuess</span> <span class="p">(</span><span class="n">String</span> <span class="n">guess</span><span class="p">){</span>
     <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-
     <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">secret</span><span class="p">.</span><span class="na">length</span><span class="p">()</span> <span class="o">-</span> <span class="n">guess</span><span class="p">.</span><span class="na">length</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">secret</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="n">guess</span><span class="p">.</span><span class="na">length</span><span class="p">()).</span> <span class="n">equals</span><span class="p">(</span><span class="n">guess</span><span class="p">))</span> <span class="p">{</span>
             <span class="n">count</span><span class="o">++</span><span class="p">;</span>
         <span class="p">}</span>
     <span class="p">}</span>
-
     <span class="k">return</span> <span class="n">count</span> <span class="o">*</span> <span class="n">Math</span><span class="p">.</span><span class="na">pow</span><span class="p">(</span><span class="n">guess</span><span class="p">.</span><span class="na">length</span><span class="p">(),</span> <span class="mi">2</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>

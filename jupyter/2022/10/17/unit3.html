@@ -135,7 +135,6 @@ window.onload = wrap_img;
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kt">int</span> <span class="nf">getChargeStartTime</span> <span class="p">(</span><span class="kt">int</span> <span class="n">chargeTime</span><span class="p">)</span> <span class="p">{</span>
     <span class="kt">int</span> <span class="n">startHour</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="kt">int</span> <span class="n">lowPrice</span> <span class="o">=</span> <span class="mi">500_000</span><span class="p">;</span>
-
     <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">23</span><span class="p">;</span> <span class="n">x</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">lowPrice</span> <span class="o">&gt;</span> <span class="n">getChargingCost</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">chargeTime</span><span class="p">))</span> <span class="p">{</span>
             <span class="n">lowPrice</span> <span class="o">=</span> <span class="n">getChargingCost</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">chargeTime</span><span class="p">);</span>
@@ -168,7 +167,6 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isStrictlyIncreasing</span> <span class="p">()</span> <span class="p">{</span>
     <span class="kt">boolean</span> <span class="n">increasing</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-
     <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">digitListSize</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">digitList</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">digitList</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="p">{</span>
             <span class="n">increasing</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
@@ -200,14 +198,11 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isBalanced</span><span class="p">(</span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">delimiters</span><span class="p">)</span> <span class="p">{</span>
     <span class="kt">int</span> <span class="n">numOpen</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">numClosed</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-
     <span class="k">for</span><span class="p">(</span><span class="n">String</span> <span class="n">d</span> <span class="p">:</span> <span class="n">delimiters</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">if</span><span class="p">(</span><span class="n">d</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">openDel</span><span class="p">))</span>
             <span class="n">numOpen</span><span class="o">++</span><span class="p">;</span>
-
         <span class="k">if</span><span class="p">(</span><span class="n">d</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">closeDel</span><span class="p">))</span>
             <span class="n">numClosed</span><span class="o">++</span><span class="p">;</span>
-                
         <span class="k">if</span><span class="p">(</span><span class="n">numClosed</span> <span class="o">&gt;</span> <span class="n">numOpen</span><span class="p">)</span>
             <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
     <span class="p">}</span>
