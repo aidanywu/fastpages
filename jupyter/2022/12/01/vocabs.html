@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      17 min read
     
 </span></p>
 
@@ -129,7 +129,23 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h1"><a href="#Unit-5">Unit 5 </a>
 <ul>
 <li class="toc-entry toc-h2"><a href="#Creating-a-Class,-describe-Naming-Conventions">Creating a Class, describe Naming Conventions </a></li>
-<li class="toc-entry toc-h2"><a href="#Examples-of-Class-related-vocabs-in-previous-codes:">Examples of Class related vocabs in previous codes: </a></li>
+<li class="toc-entry toc-h2"><a href="#Constructor,-describe-why-there-is-no-return">Constructor, describe why there is no return </a></li>
+<li class="toc-entry toc-h2"><a href="#Accessor-methods,-relationship-to-getter">Accessor methods, relationship to getter </a></li>
+<li class="toc-entry toc-h2"><a href="#Mutator-methods,-relationship-to-setter,-describe-void-return-type">Mutator methods, relationship to setter, describe void return type </a></li>
+<li class="toc-entry toc-h2"><a href="#Static-variables-and-methods,-Class-variables">Static variables and methods, Class variables </a></li>
+<li class="toc-entry toc-h2"><a href="#Access-modifiers:-Public,-Private,-Protected">Access modifiers: Public, Private, Protected </a></li>
+<li class="toc-entry toc-h2"><a href="#this-Keyword">this Keyword </a></li>
+<li class="toc-entry toc-h2"><a href="#main-method,-tester-methods">main method, tester methods </a></li>
+<li class="toc-entry toc-h2"><a href="#Inheritance,-extends">Inheritance, extends </a></li>
+<li class="toc-entry toc-h2"><a href="#Subclass-constructor,-super-Keyword">Subclass constructor, super Keyword </a></li>
+<li class="toc-entry toc-h2"><a href="#Overloading-a-method,-same-name-different-parameters">Overloading a method, same name different parameters </a></li>
+<li class="toc-entry toc-h2"><a href="#Overriding-a-method,-same-signature-of-a-method">Overriding a method, same signature of a method </a></li>
+<li class="toc-entry toc-h2"><a href="#Abstract-Class,-Abstract-Method">Abstract Class, Abstract Method </a></li>
+<li class="toc-entry toc-h2"><a href="#Standard-methods:-toString(),-equals(),-hashCode()">Standard methods: toString(), equals(), hashCode() </a></li>
+<li class="toc-entry toc-h2"><a href="#Late-binding-of-object,-referencing-superclass-object,-ie-Animal-a-=-new-Chicken();-Animal-b-=-new-Goat();">Late binding of object, referencing superclass object, ie Animal a = new Chicken(); Animal b = new Goat(); </a></li>
+<li class="toc-entry toc-h2"><a href="#Polymorphism:-any-of-overloading,-overriding,-late-binding">Polymorphism: any of overloading, overriding, late binding </a></li>
+<li class="toc-entry toc-h2"><a href="#Big-O-notation-for-Hash-map,-Binary-Search,-Single-loop,-Nested-Loop">Big O notation for Hash map, Binary Search, Single loop, Nested Loop </a></li>
+<li class="toc-entry toc-h2"><a href="#Examples-of-Class-related-vocabs:">Examples of Class related vocabs: </a></li>
 </ul>
 </li>
 </ul><!--
@@ -879,18 +895,117 @@ NOT(A and B) is the same as NOT(A) or NOT(B)</pre>
 <a class="anchor" href="#Creating-a-Class,-describe-Naming-Conventions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating a Class, describe Naming Conventions<a class="anchor-link" href="#Creating-a-Class,-describe-Naming-Conventions"> </a>
 </h2>
 <ul>
-<li>class keyword then class name with first letter capitalized
-## Constructor, describe why there is no return
-## Accessor methods, relationship to getter
-## Mutator methods, relationship to setter, describe void return type
-## Static variables, Class variables, show use case in code
-## Show use case of access modifiers: Public, Private, Protected
-## Static methods, Class methods
-## this Keyword</li>
-<li>## main method, tester methods</li>
-<li>used for testing purposes
-## Inheritance, extends
-## Subclass constructor, super Keyword</li>
+<li>class keyword then class name with first letter capitalized</li>
+</ul>
+<h2 id="Constructor,-describe-why-there-is-no-return">
+<a class="anchor" href="#Constructor,-describe-why-there-is-no-return" aria-hidden="true"><span class="octicon octicon-link"></span></a>Constructor, describe why there is no return<a class="anchor-link" href="#Constructor,-describe-why-there-is-no-return"> </a>
+</h2>
+<ul>
+<li>Used when creating an instance of the class</li>
+<li>Same name as the class</li>
+<li>No return because it returns the reference id of the object</li>
+</ul>
+<h2 id="Accessor-methods,-relationship-to-getter">
+<a class="anchor" href="#Accessor-methods,-relationship-to-getter" aria-hidden="true"><span class="octicon octicon-link"></span></a>Accessor methods, relationship to getter<a class="anchor-link" href="#Accessor-methods,-relationship-to-getter"> </a>
+</h2>
+<ul>
+<li>To get the value of an attribute</li>
+<li>getVar()</li>
+</ul>
+<h2 id="Mutator-methods,-relationship-to-setter,-describe-void-return-type">
+<a class="anchor" href="#Mutator-methods,-relationship-to-setter,-describe-void-return-type" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mutator methods, relationship to setter, describe void return type<a class="anchor-link" href="#Mutator-methods,-relationship-to-setter,-describe-void-return-type"> </a>
+</h2>
+<ul>
+<li>To set the value of attributes</li>
+<li>Relation to setter is that it sets the value of an attribute</li>
+<li>void return type means it doesn't return anything</li>
+</ul>
+<h2 id="Static-variables-and-methods,-Class-variables">
+<a class="anchor" href="#Static-variables-and-methods,-Class-variables" aria-hidden="true"><span class="octicon octicon-link"></span></a>Static variables and methods, Class variables<a class="anchor-link" href="#Static-variables-and-methods,-Class-variables"> </a>
+</h2>
+<ul>
+<li>Belongs to the class, not instance</li>
+<li>Built once throughout all instances</li>
+</ul>
+<h2 id="Access-modifiers:-Public,-Private,-Protected">
+<a class="anchor" href="#Access-modifiers:-Public,-Private,-Protected" aria-hidden="true"><span class="octicon octicon-link"></span></a>Access modifiers: Public, Private, Protected<a class="anchor-link" href="#Access-modifiers:-Public,-Private,-Protected"> </a>
+</h2>
+<ul>
+<li>public allows it to be accessed freely</li>
+<li>private allows it to only be accessed within the same class</li>
+<li>protected allows it to only be accessed within the same package and outside of a child class</li>
+</ul>
+<h2 id="this-Keyword">
+<a class="anchor" href="#this-Keyword" aria-hidden="true"><span class="octicon octicon-link"></span></a>this Keyword<a class="anchor-link" href="#this-Keyword"> </a>
+</h2>
+<ul>
+<li>refers to the existing class</li>
+</ul>
+<h2 id="main-method,-tester-methods">
+<a class="anchor" href="#main-method,-tester-methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>main method, tester methods<a class="anchor-link" href="#main-method,-tester-methods"> </a>
+</h2>
+<ul>
+<li>used for testing purposes</li>
+</ul>
+<h2 id="Inheritance,-extends">
+<a class="anchor" href="#Inheritance,-extends" aria-hidden="true"><span class="octicon octicon-link"></span></a>Inheritance, extends<a class="anchor-link" href="#Inheritance,-extends"> </a>
+</h2>
+<ul>
+<li>Gets all methods from the superclass</li>
+</ul>
+<h2 id="Subclass-constructor,-super-Keyword">
+<a class="anchor" href="#Subclass-constructor,-super-Keyword" aria-hidden="true"><span class="octicon octicon-link"></span></a>Subclass constructor, super Keyword<a class="anchor-link" href="#Subclass-constructor,-super-Keyword"> </a>
+</h2>
+<ul>
+<li>The subclass constructor is used when instantiating the object</li>
+<li>super refers to the superclass</li>
+</ul>
+<h2 id="Overloading-a-method,-same-name-different-parameters">
+<a class="anchor" href="#Overloading-a-method,-same-name-different-parameters" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overloading a method, same name different parameters<a class="anchor-link" href="#Overloading-a-method,-same-name-different-parameters"> </a>
+</h2>
+<ul>
+<li>two methods with the same name but different parameters allows a method to be called with different data types</li>
+<li>makes code clean and readable and gives flexibility</li>
+</ul>
+<h2 id="Overriding-a-method,-same-signature-of-a-method">
+<a class="anchor" href="#Overriding-a-method,-same-signature-of-a-method" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overriding a method, same signature of a method<a class="anchor-link" href="#Overriding-a-method,-same-signature-of-a-method"> </a>
+</h2>
+<ul>
+<li>subclass has same method as super class and the subclass method is called rather than the super class's</li>
+</ul>
+<h2 id="Abstract-Class,-Abstract-Method">
+<a class="anchor" href="#Abstract-Class,-Abstract-Method" aria-hidden="true"><span class="octicon octicon-link"></span></a>Abstract Class, Abstract Method<a class="anchor-link" href="#Abstract-Class,-Abstract-Method"> </a>
+</h2>
+<ul>
+<li>Abstract methods are defined in the subclasses and having abstract methods require superclass to be abstract as well. Objects cannot be created from an abstract class, they can only be extended. This is useful when you want to create a class that can be extended but not instantiated.</li>
+</ul>
+<h2 id="Standard-methods:-toString(),-equals(),-hashCode()">
+<a class="anchor" href="#Standard-methods:-toString(),-equals(),-hashCode()" aria-hidden="true"><span class="octicon octicon-link"></span></a>Standard methods: toString(), equals(), hashCode()<a class="anchor-link" href="#Standard-methods:-toString(),-equals(),-hashCode()"> </a>
+</h2>
+<ul>
+<li>ToString is a standard method that is used to convert an object into a string. Equals is useful for comparing two objects to see if they are equal. HashCode is useful for getting a unique hash code for an object.</li>
+</ul>
+<h2 id="Late-binding-of-object,-referencing-superclass-object,-ie-Animal-a-=-new-Chicken();-Animal-b-=-new-Goat();">
+<a class="anchor" href="#Late-binding-of-object,-referencing-superclass-object,-ie-Animal-a-=-new-Chicken();-Animal-b-=-new-Goat();" aria-hidden="true"><span class="octicon octicon-link"></span></a>Late binding of object, referencing superclass object, ie Animal a = new Chicken(); Animal b = new Goat();<a class="anchor-link" href="#Late-binding-of-object,-referencing-superclass-object,-ie-Animal-a-=-new-Chicken();-Animal-b-=-new-Goat();"> </a>
+</h2>
+<ul>
+<li>allows the compiler to determine which method to use at runtime instead of compile time</li>
+</ul>
+<h2 id="Polymorphism:-any-of-overloading,-overriding,-late-binding">
+<a class="anchor" href="#Polymorphism:-any-of-overloading,-overriding,-late-binding" aria-hidden="true"><span class="octicon octicon-link"></span></a>Polymorphism: any of overloading, overriding, late binding<a class="anchor-link" href="#Polymorphism:-any-of-overloading,-overriding,-late-binding"> </a>
+</h2>
+<ul>
+<li>See above definitions</li>
+</ul>
+<h2 id="Big-O-notation-for-Hash-map,-Binary-Search,-Single-loop,-Nested-Loop">
+<a class="anchor" href="#Big-O-notation-for-Hash-map,-Binary-Search,-Single-loop,-Nested-Loop" aria-hidden="true"><span class="octicon octicon-link"></span></a>Big O notation for Hash map, Binary Search, Single loop, Nested Loop<a class="anchor-link" href="#Big-O-notation-for-Hash-map,-Binary-Search,-Single-loop,-Nested-Loop"> </a>
+</h2>
+<ul>
+<li>Big O notation is used to describe time complexity</li>
+<li>A hashmap operation takes O(1) to run</li>
+<li>Binary search takes O(log n)</li>
+<li>Single loop takes O(n)</li>
+<li>Nested loop takes O(n^k) where k is how many nested loops there are</li>
 </ul>
 
 </div>
@@ -899,9 +1014,548 @@ NOT(A and B) is the same as NOT(A) or NOT(B)</pre>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Examples-of-Class-related-vocabs-in-previous-codes:">
-<a class="anchor" href="#Examples-of-Class-related-vocabs-in-previous-codes:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Examples of Class related vocabs in previous codes:<a class="anchor-link" href="#Examples-of-Class-related-vocabs-in-previous-codes:"> </a>
+<h2 id="Examples-of-Class-related-vocabs:">
+<a class="anchor" href="#Examples-of-Class-related-vocabs:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Examples of Class related vocabs:<a class="anchor-link" href="#Examples-of-Class-related-vocabs:"> </a>
 </h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="cm">/*</span>
+<span class="cm"> * Creator: Nighthawk Coding Society</span>
+<span class="cm"> * Mini Lab Name: Fibonacci sequence, featuring a Stream Algorithm</span>
+<span class="cm"> * </span>
+<span class="cm"> */</span>
+
+<span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="p">;</span>  
+<span class="kn">import</span> <span class="nn">java.util.HashMap</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.stream.Stream</span><span class="p">;</span>
+
+<span class="cm">/* Objective will require changing to abstract class with one or more abstract methods below */</span>
+<span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">Fibo</span> <span class="p">{</span>
+    <span class="n">String</span> <span class="n">name</span><span class="p">;</span>  <span class="c1">// name or title of method</span>
+    <span class="kt">int</span> <span class="n">size</span><span class="p">;</span>  <span class="c1">// nth sequence</span>
+    <span class="kt">int</span> <span class="n">hashID</span><span class="p">;</span>  <span class="c1">// counter for hashIDs in hash map</span>
+    <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Long</span><span class="o">&gt;</span> <span class="n">list</span><span class="p">;</span>   <span class="c1">// captures current Fibonacci sequence</span>
+    <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">Integer</span><span class="p">,</span> <span class="n">Object</span><span class="o">&gt;</span> <span class="n">hash</span><span class="p">;</span>  <span class="c1">// captures each sequence leading to final result</span>
+
+    <span class="cm">/*</span>
+<span class="cm">     Zero parameter constructor uses Telescoping technique to allow setting of the required value nth</span>
+<span class="cm">     @param: none</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="nf">Fibo</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span> <span class="c1">// telescope to avoid code duplication, using default as 20</span>
+    <span class="p">}</span>
+
+    <span class="cm">/*</span>
+<span class="cm">     Construct the nth fibonacci number</span>
+<span class="cm">     @param: nth number, the value is constrained to 92 because of overflow in a long</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="nf">Fibo</span><span class="p">(</span><span class="kt">int</span> <span class="n">nth</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">size</span> <span class="o">=</span> <span class="n">nth</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">hashID</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">hash</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="c1">//initialize fibonacci and time mvc</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">init</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="cm">/*</span>
+<span class="cm">     This Method should be "abstract"</span>
+<span class="cm">     Leave method as protected, as it is only authorized to extender of the class</span>
+<span class="cm">     Make new class that extends and defines init()</span>
+<span class="cm">     Inside references within this class would change from this to super</span>
+<span class="cm">     Repeat process using for, while, recursion</span>
+<span class="cm">     */</span>
+    <span class="kd">protected</span> <span class="kd">abstract</span> <span class="kt">void</span> <span class="nf">init</span><span class="p">();</span>
+
+    <span class="cm">/*</span>
+<span class="cm">     Number is added to fibonacci sequence, current state of "list" is added to hash for hashID "num"</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setData</span><span class="p">(</span><span class="kt">long</span> <span class="n">num</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">num</span><span class="p">);</span>
+        <span class="n">hash</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">hashID</span><span class="o">++</span><span class="p">,</span> <span class="n">list</span><span class="p">.</span><span class="na">clone</span><span class="p">());</span>
+    <span class="p">}</span>
+
+    <span class="cm">/*</span>
+<span class="cm">     Custom Getter to return last element in fibonacci sequence</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">long</span> <span class="nf">getNth</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">list</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">size</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="cm">/*</span>
+<span class="cm">     Custom Getter to return last fibonacci sequence in HashMap</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="n">Object</span> <span class="nf">getNthSeq</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">hash</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="cm">/*</span>
+<span class="cm">     Console/Terminal supported print method</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">print</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Init method = "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"fibonacci Number "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">size</span> <span class="o">+</span> <span class="s">" = "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">getNth</span><span class="p">());</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"fibonacci List = "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">list</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"fibonacci Hashmap = "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">hash</span><span class="p">);</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span> <span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="k">this</span><span class="p">.</span><span class="na">size</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"fibonacci Sequence "</span> <span class="o">+</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s">" = "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">getNthSeq</span><span class="p">(</span><span class="n">i</span><span class="p">));</span>
+        <span class="p">}</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">FibF</span> <span class="kd">extends</span> <span class="n">Fibo</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">super</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="s">"For"</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="kd">super</span><span class="p">.</span><span class="na">size</span><span class="p">;</span>
+        <span class="kt">long</span><span class="o">[]</span> <span class="n">previous</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">long</span><span class="o">[]</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">};</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">count</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kd">super</span><span class="p">.</span><span class="na">setData</span><span class="p">(</span><span class="n">previous</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span>
+            <span class="n">previous</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">long</span><span class="o">[]</span> <span class="p">{</span><span class="n">previous</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span> <span class="n">previous</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">+</span> <span class="n">previous</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">};</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="kd">static</span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">long</span> <span class="n">start</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
+        <span class="n">FibF</span> <span class="n">fibF</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FibF</span><span class="p">();</span>
+        <span class="kt">long</span> <span class="n">end</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
+        <span class="n">fibF</span><span class="p">.</span><span class="na">print</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Time: "</span> <span class="o">+</span> <span class="p">(</span><span class="n">end</span><span class="o">-</span><span class="n">start</span><span class="p">)</span> <span class="o">+</span> <span class="s">" ns"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">FibF</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">package</span> <span class="nn">com.nighthawk.spring_portfolio.mvc.calendar</span><span class="p">;</span>
+
+<span class="c1">// Prototype Implementation</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">APCalendar</span> <span class="p">{</span>
+
+    <span class="cm">/** Returns true if year is a leap year and false otherwise.</span>
+<span class="cm">     * isLeapYear(2019) returns False</span>
+<span class="cm">     * isLeapYear(2016) returns True</span>
+<span class="cm">     */</span>          
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">isLeapYear</span><span class="p">(</span><span class="kt">int</span> <span class="n">year</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// implementation not shown</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">year</span> <span class="o">%</span> <span class="mi">400</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="p">(</span><span class="n">year</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">))</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="p">}</span>
+        
+    <span class="cm">/** Returns the value representing the day of the week </span>
+<span class="cm">     * 0 denotes Sunday, </span>
+<span class="cm">     * 1 denotes Monday, ..., </span>
+<span class="cm">     * 6 denotes Saturday. </span>
+<span class="cm">     * firstDayOfYear(2019) returns 2 for Tuesday.</span>
+<span class="cm">    */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">firstDayOfYear</span><span class="p">(</span><span class="kt">int</span> <span class="n">year</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// implementation not shown</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">year</span> <span class="o">&gt;</span> <span class="mi">1752</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="p">(</span><span class="n">year</span> <span class="o">+</span> <span class="n">numberOfLeapYears</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">year</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span><span class="o">%</span><span class="mi">7</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">year</span> <span class="o">+</span> <span class="p">(</span><span class="n">year</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">4</span> <span class="o">+</span> <span class="mi">5</span><span class="p">)</span><span class="o">%</span><span class="mi">7</span><span class="p">;</span>
+        <span class="p">}</span>
+
+
+    <span class="cm">/** Returns n, where month, day, and year specify the nth day of the year.</span>
+<span class="cm">     * This method accounts for whether year is a leap year. </span>
+<span class="cm">     * dayOfYear(1, 1, 2019) return 1</span>
+<span class="cm">     * dayOfYear(3, 1, 2017) returns 60, since 2017 is not a leap year</span>
+<span class="cm">     * dayOfYear(3, 1, 2016) returns 61, since 2016 is a leap year. </span>
+<span class="cm">    */</span> 
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">dayOfYear</span><span class="p">(</span><span class="kt">int</span> <span class="n">month</span><span class="p">,</span> <span class="kt">int</span> <span class="n">day</span><span class="p">,</span> <span class="kt">int</span> <span class="n">year</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// implementation not shown</span>
+        <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">month</span> <span class="o">&lt;</span> <span class="mi">8</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">count</span> <span class="o">=</span> <span class="mi">31</span><span class="o">*</span><span class="p">((</span><span class="n">month</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">30</span><span class="o">*</span><span class="p">((</span><span class="n">month</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">day</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">count</span> <span class="o">=</span> <span class="mi">214</span> <span class="o">+</span> <span class="mi">31</span><span class="o">*</span><span class="p">((</span><span class="n">month</span><span class="o">-</span><span class="mi">7</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">30</span><span class="o">*</span><span class="p">((</span><span class="n">month</span><span class="o">-</span><span class="mi">8</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">day</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">month</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">isLeapYear</span><span class="p">(</span><span class="n">year</span><span class="p">))</span> <span class="p">{</span>
+                <span class="n">count</span> <span class="o">=</span> <span class="n">count</span> <span class="o">-</span> <span class="mi">2</span><span class="p">;</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="n">count</span><span class="o">--</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">count</span><span class="p">;</span>
+        <span class="p">}</span>
+
+    <span class="cm">/** Returns the number of leap years between year1 and year2, inclusive.</span>
+<span class="cm">     * Precondition: 0 &lt;= year1 &lt;= year2</span>
+<span class="cm">    */</span> 
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">numberOfLeapYears</span><span class="p">(</span><span class="kt">int</span> <span class="n">year1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">year2</span><span class="p">)</span> <span class="p">{</span>
+         <span class="c1">// to be implemented in part (a)</span>
+        <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">year1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">year2</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">isLeapYear</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="p">{</span>
+                <span class="n">count</span><span class="o">++</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">count</span><span class="p">;</span>
+        <span class="p">}</span>
+
+    <span class="cm">/** Returns the value representing the day of the week for the given date</span>
+<span class="cm">     * Precondition: The date represented by month, day, year is a valid date.</span>
+<span class="cm">    */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">dayOfWeek</span><span class="p">(</span><span class="kt">int</span> <span class="n">month</span><span class="p">,</span> <span class="kt">int</span> <span class="n">day</span><span class="p">,</span> <span class="kt">int</span> <span class="n">year</span><span class="p">)</span> <span class="p">{</span> 
+        <span class="c1">// to be implemented in part (b)</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">firstDayOfYear</span><span class="p">(</span><span class="n">year</span><span class="p">)</span> <span class="o">+</span> <span class="n">dayOfYear</span><span class="p">(</span><span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">year</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">7</span><span class="p">;</span>
+        <span class="p">}</span>
+
+    <span class="cm">/** Tester method */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Private access modifiers</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"numberOfLeapYears 2000-2022: "</span> <span class="o">+</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">numberOfLeapYears</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">2022</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"firstDayOfYear 1700 (1): "</span> <span class="o">+</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">firstDayOfYear</span><span class="p">(</span><span class="mi">1700</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"firstDayOfYear 1701 (3): "</span> <span class="o">+</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">firstDayOfYear</span><span class="p">(</span><span class="mi">1701</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"firstDayOfYear 1752 (3): "</span> <span class="o">+</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">firstDayOfYear</span><span class="p">(</span><span class="mi">1752</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"firstDayOfYear 1753 (1): "</span> <span class="o">+</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">firstDayOfYear</span><span class="p">(</span><span class="mi">1753</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"firstDayOfYear 1800 (3): "</span> <span class="o">+</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">firstDayOfYear</span><span class="p">(</span><span class="mi">1800</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"firstDayOfYear 1801 (4): "</span> <span class="o">+</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">firstDayOfYear</span><span class="p">(</span><span class="mi">1801</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"firstDayOfYear 2019 (2): "</span> <span class="o">+</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">firstDayOfYear</span><span class="p">(</span><span class="mi">2019</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"dayOfYear 3/1/2017: "</span> <span class="o">+</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">dayOfYear</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2017</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"dayOfYear 3/1/2016: "</span> <span class="o">+</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">dayOfYear</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2016</span><span class="p">));</span>
+
+        <span class="c1">// Public access modifiers</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"isLeapYear 1600: "</span> <span class="o">+</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">isLeapYear</span><span class="p">(</span><span class="mi">1600</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"isLeapYear 1800: "</span> <span class="o">+</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">isLeapYear</span><span class="p">(</span><span class="mi">1800</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"isLeapYear 2019: "</span> <span class="o">+</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">isLeapYear</span><span class="p">(</span><span class="mi">2019</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"isLeapYear 2024: "</span> <span class="o">+</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">isLeapYear</span><span class="p">(</span><span class="mi">2024</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"numberOfLeapYears 2000-2022: "</span> <span class="o">+</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">numberOfLeapYears</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">2022</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"dayOfWeek 7/5/2022: "</span> <span class="o">+</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">dayOfWeek</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2022</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"dayOfWeek 8/5/2022: "</span> <span class="o">+</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">dayOfWeek</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2022</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"dayOfWeek 11/18/2022: "</span> <span class="o">+</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">dayOfWeek</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">2022</span><span class="p">));</span>
+    <span class="p">}</span>
+
+<span class="p">}</span><span class="kn">package</span> <span class="nn">com.nighthawk.spring_portfolio.mvc.calendar</span><span class="p">;</span>
+
+<span class="c1">// Prototype Implementation</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">APCalendar</span> <span class="p">{</span>
+
+    <span class="cm">/** Returns true if year is a leap year and false otherwise.</span>
+<span class="cm">     * isLeapYear(2019) returns False</span>
+<span class="cm">     * isLeapYear(2016) returns True</span>
+<span class="cm">     */</span>          
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">isLeapYear</span><span class="p">(</span><span class="kt">int</span> <span class="n">year</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// implementation not shown</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">year</span> <span class="o">%</span> <span class="mi">400</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="p">(</span><span class="n">year</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">))</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="p">}</span>
+        
+    <span class="cm">/** Returns the value representing the day of the week </span>
+<span class="cm">     * 0 denotes Sunday, </span>
+<span class="cm">     * 1 denotes Monday, ..., </span>
+<span class="cm">     * 6 denotes Saturday. </span>
+<span class="cm">     * firstDayOfYear(2019) returns 2 for Tuesday.</span>
+<span class="cm">    */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">firstDayOfYear</span><span class="p">(</span><span class="kt">int</span> <span class="n">year</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// implementation not shown</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">year</span> <span class="o">&gt;</span> <span class="mi">1752</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="p">(</span><span class="n">year</span> <span class="o">+</span> <span class="n">numberOfLeapYears</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">year</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span><span class="o">%</span><span class="mi">7</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">year</span> <span class="o">+</span> <span class="p">(</span><span class="n">year</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">4</span> <span class="o">+</span> <span class="mi">5</span><span class="p">)</span><span class="o">%</span><span class="mi">7</span><span class="p">;</span>
+        <span class="p">}</span>
+
+
+    <span class="cm">/** Returns n, where month, day, and year specify the nth day of the year.</span>
+<span class="cm">     * This method accounts for whether year is a leap year. </span>
+<span class="cm">     * dayOfYear(1, 1, 2019) return 1</span>
+<span class="cm">     * dayOfYear(3, 1, 2017) returns 60, since 2017 is not a leap year</span>
+<span class="cm">     * dayOfYear(3, 1, 2016) returns 61, since 2016 is a leap year. </span>
+<span class="cm">    */</span> 
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">dayOfYear</span><span class="p">(</span><span class="kt">int</span> <span class="n">month</span><span class="p">,</span> <span class="kt">int</span> <span class="n">day</span><span class="p">,</span> <span class="kt">int</span> <span class="n">year</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// implementation not shown</span>
+        <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">month</span> <span class="o">&lt;</span> <span class="mi">8</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">count</span> <span class="o">=</span> <span class="mi">31</span><span class="o">*</span><span class="p">((</span><span class="n">month</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">30</span><span class="o">*</span><span class="p">((</span><span class="n">month</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">day</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">count</span> <span class="o">=</span> <span class="mi">214</span> <span class="o">+</span> <span class="mi">31</span><span class="o">*</span><span class="p">((</span><span class="n">month</span><span class="o">-</span><span class="mi">7</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">30</span><span class="o">*</span><span class="p">((</span><span class="n">month</span><span class="o">-</span><span class="mi">8</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">day</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">month</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">isLeapYear</span><span class="p">(</span><span class="n">year</span><span class="p">))</span> <span class="p">{</span>
+                <span class="n">count</span> <span class="o">=</span> <span class="n">count</span> <span class="o">-</span> <span class="mi">2</span><span class="p">;</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="n">count</span><span class="o">--</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">count</span><span class="p">;</span>
+        <span class="p">}</span>
+
+    <span class="cm">/** Returns the number of leap years between year1 and year2, inclusive.</span>
+<span class="cm">     * Precondition: 0 &lt;= year1 &lt;= year2</span>
+<span class="cm">    */</span> 
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">numberOfLeapYears</span><span class="p">(</span><span class="kt">int</span> <span class="n">year1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">year2</span><span class="p">)</span> <span class="p">{</span>
+         <span class="c1">// to be implemented in part (a)</span>
+        <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">year1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">year2</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">isLeapYear</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="p">{</span>
+                <span class="n">count</span><span class="o">++</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">count</span><span class="p">;</span>
+        <span class="p">}</span>
+
+    <span class="cm">/** Returns the value representing the day of the week for the given date</span>
+<span class="cm">     * Precondition: The date represented by month, day, year is a valid date.</span>
+<span class="cm">    */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">dayOfWeek</span><span class="p">(</span><span class="kt">int</span> <span class="n">month</span><span class="p">,</span> <span class="kt">int</span> <span class="n">day</span><span class="p">,</span> <span class="kt">int</span> <span class="n">year</span><span class="p">)</span> <span class="p">{</span> 
+        <span class="c1">// to be implemented in part (b)</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">firstDayOfYear</span><span class="p">(</span><span class="n">year</span><span class="p">)</span> <span class="o">+</span> <span class="n">dayOfYear</span><span class="p">(</span><span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">year</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">7</span><span class="p">;</span>
+        <span class="p">}</span>
+
+    <span class="cm">/** Tester method */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Private access modifiers</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"numberOfLeapYears 2000-2022: "</span> <span class="o">+</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">numberOfLeapYears</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">2022</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"firstDayOfYear 1700 (1): "</span> <span class="o">+</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">firstDayOfYear</span><span class="p">(</span><span class="mi">1700</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"firstDayOfYear 1701 (3): "</span> <span class="o">+</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">firstDayOfYear</span><span class="p">(</span><span class="mi">1701</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"firstDayOfYear 1752 (3): "</span> <span class="o">+</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">firstDayOfYear</span><span class="p">(</span><span class="mi">1752</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"firstDayOfYear 1753 (1): "</span> <span class="o">+</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">firstDayOfYear</span><span class="p">(</span><span class="mi">1753</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"firstDayOfYear 1800 (3): "</span> <span class="o">+</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">firstDayOfYear</span><span class="p">(</span><span class="mi">1800</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"firstDayOfYear 1801 (4): "</span> <span class="o">+</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">firstDayOfYear</span><span class="p">(</span><span class="mi">1801</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"firstDayOfYear 2019 (2): "</span> <span class="o">+</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">firstDayOfYear</span><span class="p">(</span><span class="mi">2019</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"dayOfYear 3/1/2017: "</span> <span class="o">+</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">dayOfYear</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2017</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"dayOfYear 3/1/2016: "</span> <span class="o">+</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">dayOfYear</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2016</span><span class="p">));</span>
+
+        <span class="c1">// Public access modifiers</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"isLeapYear 1600: "</span> <span class="o">+</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">isLeapYear</span><span class="p">(</span><span class="mi">1600</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"isLeapYear 1800: "</span> <span class="o">+</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">isLeapYear</span><span class="p">(</span><span class="mi">1800</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"isLeapYear 2019: "</span> <span class="o">+</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">isLeapYear</span><span class="p">(</span><span class="mi">2019</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"isLeapYear 2024: "</span> <span class="o">+</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">isLeapYear</span><span class="p">(</span><span class="mi">2024</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"numberOfLeapYears 2000-2022: "</span> <span class="o">+</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">numberOfLeapYears</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">2022</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"dayOfWeek 7/5/2022: "</span> <span class="o">+</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">dayOfWeek</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2022</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"dayOfWeek 8/5/2022: "</span> <span class="o">+</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">dayOfWeek</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2022</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"dayOfWeek 11/18/2022: "</span> <span class="o">+</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">dayOfWeek</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">2022</span><span class="p">));</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">package</span> <span class="nn">com.nighthawk.spring_portfolio.mvc.calendar</span><span class="p">;</span>
+
+<span class="cm">/** Simple POJO </span>
+<span class="cm"> * Used to Interface with APCalendar</span>
+<span class="cm"> * The toString method(s) prepares object for JSON serialization</span>
+<span class="cm"> * Note... this is NOT an entity, just an abstraction</span>
+<span class="cm"> */</span>
+<span class="kd">class</span> <span class="nc">Year</span> <span class="p">{</span>
+   <span class="kd">private</span> <span class="kt">int</span> <span class="n">year</span><span class="p">;</span>
+   <span class="kd">private</span> <span class="kt">boolean</span> <span class="n">isLeapYear</span><span class="p">;</span>
+
+   <span class="kd">private</span> <span class="kt">int</span> <span class="n">year4</span><span class="p">;</span>
+   <span class="kd">private</span> <span class="kt">int</span> <span class="n">firstDayOfYear</span><span class="p">;</span>
+
+   <span class="kd">private</span> <span class="kt">int</span> <span class="n">year1</span><span class="p">;</span>
+   <span class="kd">private</span> <span class="kt">int</span> <span class="n">year2</span><span class="p">;</span>
+   <span class="kd">private</span> <span class="kt">int</span> <span class="n">numberOfLeapYears</span><span class="p">;</span>
+
+   <span class="kd">private</span> <span class="kt">int</span> <span class="n">month</span><span class="p">;</span>
+   <span class="kd">private</span> <span class="kt">int</span> <span class="n">day</span><span class="p">;</span>
+   <span class="kd">private</span> <span class="kt">int</span> <span class="n">year3</span><span class="p">;</span>
+   <span class="kd">private</span> <span class="kt">int</span> <span class="n">dayOfWeek</span><span class="p">;</span>
+
+   <span class="kd">private</span> <span class="kt">int</span> <span class="n">month1</span><span class="p">;</span>
+   <span class="kd">private</span> <span class="kt">int</span> <span class="n">day1</span><span class="p">;</span>
+   <span class="kd">private</span> <span class="kt">int</span> <span class="n">year5</span><span class="p">;</span>
+   <span class="kd">private</span> <span class="kt">int</span> <span class="n">dayOfYear</span><span class="p">;</span>
+
+   <span class="c1">// zero argument constructor</span>
+   <span class="kd">public</span> <span class="nf">Year</span><span class="p">()</span> <span class="p">{}</span> 
+
+   <span class="cm">/* year getter/setters */</span>
+   <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getYear</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="n">year</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setYear</span><span class="p">(</span><span class="kt">int</span> <span class="n">year</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="na">year</span> <span class="o">=</span> <span class="n">year</span><span class="p">;</span>
+      <span class="k">this</span><span class="p">.</span><span class="na">setIsLeapYear</span><span class="p">(</span><span class="n">year</span><span class="p">);</span>
+   <span class="p">}</span>
+
+
+   <span class="cm">/* year getter/setters */</span>
+   <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getYear4</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="n">year4</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setFirst</span><span class="p">(</span><span class="kt">int</span> <span class="n">year</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="na">year4</span> <span class="o">=</span> <span class="n">year</span><span class="p">;</span>
+      <span class="k">this</span><span class="p">.</span><span class="na">setFirstDayOfYear</span><span class="p">(</span><span class="n">year</span><span class="p">);</span>
+   <span class="p">}</span>
+
+   
+   <span class="cm">/* year getter/setters */</span>
+   <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getYear1</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="n">year1</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getYear2</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="n">year2</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setNum</span><span class="p">(</span><span class="kt">int</span> <span class="n">year1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">year2</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="na">year1</span> <span class="o">=</span> <span class="n">year1</span><span class="p">;</span>
+      <span class="k">this</span><span class="p">.</span><span class="na">year2</span> <span class="o">=</span> <span class="n">year2</span><span class="p">;</span>
+      <span class="k">this</span><span class="p">.</span><span class="na">setNumberOfLeapYears</span><span class="p">(</span><span class="n">year1</span><span class="p">,</span> <span class="n">year2</span><span class="p">);</span>
+   <span class="p">}</span>
+
+   <span class="cm">/* year getter/setters */</span>
+   <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getMonth</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="n">month</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getDay</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="n">day</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getYear3</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="n">year3</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setWeek</span><span class="p">(</span><span class="kt">int</span> <span class="n">month</span><span class="p">,</span> <span class="kt">int</span> <span class="n">day</span><span class="p">,</span> <span class="kt">int</span> <span class="n">year</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="na">month</span> <span class="o">=</span> <span class="n">month</span><span class="p">;</span>
+      <span class="k">this</span><span class="p">.</span><span class="na">day</span> <span class="o">=</span> <span class="n">day</span><span class="p">;</span>
+      <span class="k">this</span><span class="p">.</span><span class="na">year3</span> <span class="o">=</span> <span class="n">year</span><span class="p">;</span>
+      <span class="k">this</span><span class="p">.</span><span class="na">setDayOfWeek</span><span class="p">(</span><span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">year</span><span class="p">);</span>
+   <span class="p">}</span>
+
+   <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getMonth1</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="n">month1</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getDay1</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="n">day1</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getYear5</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="n">year5</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setDay</span><span class="p">(</span><span class="kt">int</span> <span class="n">month</span><span class="p">,</span> <span class="kt">int</span> <span class="n">day</span><span class="p">,</span> <span class="kt">int</span> <span class="n">year</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="na">month1</span> <span class="o">=</span> <span class="n">month</span><span class="p">;</span>
+      <span class="k">this</span><span class="p">.</span><span class="na">day1</span> <span class="o">=</span> <span class="n">day</span><span class="p">;</span>
+      <span class="k">this</span><span class="p">.</span><span class="na">year5</span> <span class="o">=</span> <span class="n">year</span><span class="p">;</span>
+      <span class="k">this</span><span class="p">.</span><span class="na">setDayOfYear</span><span class="p">(</span><span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">year</span><span class="p">);</span>
+   <span class="p">}</span>   
+
+   <span class="cm">/* isLeapYear getter/setters */</span>
+   <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">getIsLeapYear</span><span class="p">(</span><span class="kt">int</span> <span class="n">year</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">isLeapYear</span><span class="p">(</span><span class="n">year</span><span class="p">);</span>
+   <span class="p">}</span>
+   <span class="kd">private</span> <span class="kt">void</span> <span class="nf">setIsLeapYear</span><span class="p">(</span><span class="kt">int</span> <span class="n">year</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// this is private to avoid tampering</span>
+      <span class="k">this</span><span class="p">.</span><span class="na">isLeapYear</span> <span class="o">=</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">isLeapYear</span><span class="p">(</span><span class="n">year</span><span class="p">);</span>
+   <span class="p">}</span>
+
+   <span class="cm">/* isLeapYearToString formatted to be mapped to JSON */</span>
+   <span class="kd">public</span> <span class="n">String</span> <span class="nf">isLeapYearToString</span><span class="p">(){</span>
+      <span class="k">return</span> <span class="p">(</span> <span class="s">"{ \"year\": "</span>  <span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="na">year</span><span class="o">+</span>  <span class="s">", "</span> <span class="o">+</span> <span class="s">"\"isLeapYear\": "</span>  <span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="na">isLeapYear</span><span class="o">+</span> <span class="s">" }"</span> <span class="p">);</span>
+   <span class="p">}</span>	
+
+   <span class="cm">/* isLeapYear getter/setters */</span>
+   <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getFirstDayOfYear</span><span class="p">(</span><span class="kt">int</span> <span class="n">year</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">firstDayOfYear</span><span class="p">(</span><span class="n">year</span><span class="p">);</span>
+   <span class="p">}</span>
+   <span class="kd">private</span> <span class="kt">void</span> <span class="nf">setFirstDayOfYear</span><span class="p">(</span><span class="kt">int</span> <span class="n">year</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// this is private to avoid tampering</span>
+      <span class="k">this</span><span class="p">.</span><span class="na">firstDayOfYear</span> <span class="o">=</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">firstDayOfYear</span><span class="p">(</span><span class="n">year</span><span class="p">);</span>
+   <span class="p">}</span>
+
+   <span class="cm">/* isLeapYearToString formatted to be mapped to JSON */</span>
+   <span class="kd">public</span> <span class="n">String</span> <span class="nf">firstDayOfYearToString</span><span class="p">(){</span>
+      <span class="k">return</span> <span class="p">(</span> <span class="s">"{ \"year\": "</span>  <span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="na">year4</span><span class="o">+</span>  <span class="s">", "</span> <span class="o">+</span> <span class="s">"\"firstDayOfYear\": "</span>  <span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="na">firstDayOfYear</span><span class="o">+</span> <span class="s">" }"</span> <span class="p">);</span>
+   <span class="p">}</span>	
+
+   <span class="cm">/* isLeapYear getter/setters */</span>
+   <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getNumberOfLeapYears</span><span class="p">(</span><span class="kt">int</span> <span class="n">year1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">year2</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">numberOfLeapYears</span><span class="p">(</span><span class="n">year1</span><span class="p">,</span> <span class="n">year2</span><span class="p">);</span>
+   <span class="p">}</span>
+   <span class="kd">private</span> <span class="kt">void</span> <span class="nf">setNumberOfLeapYears</span><span class="p">(</span><span class="kt">int</span> <span class="n">year1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">year2</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// this is private to avoid tampering</span>
+      <span class="k">this</span><span class="p">.</span><span class="na">numberOfLeapYears</span> <span class="o">=</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">numberOfLeapYears</span><span class="p">(</span><span class="n">year1</span><span class="p">,</span> <span class="n">year2</span><span class="p">);</span>
+   <span class="p">}</span>
+
+   <span class="cm">/* isLeapYearToString formatted to be mapped to JSON */</span>
+   <span class="kd">public</span> <span class="n">String</span> <span class="nf">numberOfLeapYearsToString</span><span class="p">(){</span>
+      <span class="k">return</span> <span class="p">(</span> <span class="s">"{ \"year1\": "</span>  <span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="na">year1</span><span class="o">+</span>  <span class="s">", "</span> <span class="o">+</span> <span class="s">"\"year2\": "</span>  <span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="na">year2</span><span class="o">+</span>  <span class="s">", "</span> <span class="o">+</span> <span class="s">"\"numberOfLeapYears\": "</span>  <span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="na">numberOfLeapYears</span><span class="o">+</span> <span class="s">" }"</span> <span class="p">);</span>
+      <span class="p">}</span>	
+
+   <span class="cm">/* isLeapYear getter/setters */</span>
+   <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getDayOfWeek</span><span class="p">(</span><span class="kt">int</span> <span class="n">month</span><span class="p">,</span> <span class="kt">int</span> <span class="n">day</span><span class="p">,</span> <span class="kt">int</span> <span class="n">year</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">dayOfWeek</span><span class="p">(</span><span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">year</span><span class="p">);</span>
+   <span class="p">}</span>
+   <span class="kd">private</span> <span class="kt">void</span> <span class="nf">setDayOfWeek</span><span class="p">(</span><span class="kt">int</span> <span class="n">month</span><span class="p">,</span> <span class="kt">int</span> <span class="n">day</span><span class="p">,</span> <span class="kt">int</span> <span class="n">year</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// this is private to avoid tampering</span>
+      <span class="k">this</span><span class="p">.</span><span class="na">dayOfWeek</span> <span class="o">=</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">dayOfWeek</span><span class="p">(</span><span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">year</span><span class="p">);</span>
+   <span class="p">}</span>
+
+   <span class="cm">/* isLeapYearToString formatted to be mapped to JSON */</span>
+   <span class="kd">public</span> <span class="n">String</span> <span class="nf">dayOfWeekToString</span><span class="p">(){</span>
+      <span class="k">return</span> <span class="p">(</span> <span class="s">"{ \"month\": "</span>  <span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="na">month</span><span class="o">+</span>  <span class="s">", "</span> <span class="o">+</span> <span class="s">"\"day\": "</span>  <span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="na">day</span><span class="o">+</span>  <span class="s">", "</span> <span class="o">+</span> <span class="s">"\"year\": "</span>  <span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="na">year3</span><span class="o">+</span>  <span class="s">", "</span> <span class="o">+</span> <span class="s">"\"dayOfWeek\": "</span>  <span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="na">dayOfWeek</span><span class="o">+</span> <span class="s">" }"</span> <span class="p">);</span>
+   <span class="p">}</span>
+
+   <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getDayOfYear</span><span class="p">(</span><span class="kt">int</span> <span class="n">month</span><span class="p">,</span> <span class="kt">int</span> <span class="n">day</span><span class="p">,</span> <span class="kt">int</span> <span class="n">year</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">dayOfYear</span><span class="p">(</span><span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">year</span><span class="p">);</span>
+   <span class="p">}</span>
+   <span class="kd">private</span> <span class="kt">void</span> <span class="nf">setDayOfYear</span><span class="p">(</span><span class="kt">int</span> <span class="n">month</span><span class="p">,</span> <span class="kt">int</span> <span class="n">day</span><span class="p">,</span> <span class="kt">int</span> <span class="n">year</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// this is private to avoid tampering</span>
+      <span class="k">this</span><span class="p">.</span><span class="na">dayOfYear</span> <span class="o">=</span> <span class="n">APCalendar</span><span class="p">.</span><span class="na">dayOfYear</span><span class="p">(</span><span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">year</span><span class="p">);</span>
+   <span class="p">}</span>
+
+   <span class="cm">/* isLeapYearToString formatted to be mapped to JSON */</span>
+   <span class="kd">public</span> <span class="n">String</span> <span class="nf">dayOfYearToString</span><span class="p">(){</span>
+      <span class="k">return</span> <span class="p">(</span> <span class="s">"{ \"month\": "</span>  <span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="na">month1</span><span class="o">+</span>  <span class="s">", "</span> <span class="o">+</span> <span class="s">"\"day\": "</span>  <span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="na">day1</span><span class="o">+</span>  <span class="s">", "</span> <span class="o">+</span> <span class="s">"\"year\": "</span>  <span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="na">year5</span><span class="o">+</span>  <span class="s">", "</span> <span class="o">+</span> <span class="s">"\"dayOfYear\": "</span>  <span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="na">dayOfYear</span><span class="o">+</span> <span class="s">" }"</span> <span class="p">);</span>
+   <span class="p">}</span>	
+
+   <span class="cm">/* standard toString placeholder until class is extended */</span>
+   <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span> 
+      <span class="k">return</span> <span class="n">isLeapYearToString</span><span class="p">();</span> 
+   <span class="p">}</span>
+
+   <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">Year</span> <span class="n">year</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Year</span><span class="p">();</span>
+      <span class="n">year</span><span class="p">.</span><span class="na">setYear</span><span class="p">(</span><span class="mi">2020</span><span class="p">);</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">year</span><span class="p">);</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Past code with classes:</p>
 <ol>
 <li><a href="https://aidanywu.github.io/fastpages/jupyter/2022/09/25/fibonacci.html">Fibonacci</a></li>
 <li><a href="https://github.com/aidanywu/spring_portfolio/tree/master/src/main/java/com/nighthawk/spring_portfolio/mvc/calendar">FRQ1</a></li>
