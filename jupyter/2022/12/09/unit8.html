@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      3 min read
     
 </span></p>
 
@@ -214,6 +214,136 @@ Enter Row: 4
 Enter Column: 2
 1
 Sum of row products: 3576
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Extra-Credit">Extra Credit<a class="anchor-link" href="#Extra-Credit"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">class</span> <span class="nc">MonkeyLoop</span> <span class="p">{</span>
+    <span class="n">String</span> <span class="o">[][]</span> <span class="n">monkeys</span><span class="p">;</span>
+    <span class="n">String</span> <span class="o">[][]</span> <span class="n">cthulhus</span><span class="p">;</span>
+
+
+    <span class="kd">public</span> <span class="nf">MonkeyLoop</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">monkeys</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[][]</span><span class="p">{</span>
+
+                <span class="p">{</span>
+                        <span class="s">&quot;ʕง ͠° ͟ل͜ ͡°)ʔ &quot;</span><span class="p">,</span>      <span class="c1">//[0][0] eyes</span>
+                <span class="p">},</span>
+
+                <span class="p">{</span>
+                        <span class="s">&quot;  \\_⏄_/  &quot;</span><span class="p">,</span>      <span class="c1">//[1][0] chin</span>
+
+                <span class="p">},</span>
+
+                <span class="p">{</span>
+                        <span class="s">&quot;  --0--   &quot;</span><span class="p">,</span>       <span class="c1">//[2][0] body</span>
+
+                <span class="p">},</span>
+
+                <span class="p">{</span>
+                        <span class="s">&quot;  ⎛   ⎞   &quot;</span>        <span class="c1">//[3][0] legs</span>
+                <span class="p">},</span>
+
+
+        <span class="p">};</span>
+
+        <span class="n">cthulhus</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[][]</span><span class="p">{</span>
+            <span class="p">{</span>
+                    <span class="s">&quot;⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⡀⠀⠀⠀⠀⠀⠀⢎⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ʕง ͠° ͟ل͜ ͡°)ʔ &quot;</span><span class="p">,</span>
+                    <span class="s">&quot;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠂⢱⠀⠀⢀⣤⡀⠀⠀⢣⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  \\_⏄_/  &quot;</span><span class="p">,</span>
+                    <span class="s">&quot;⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⠻⠉⣧⣿⣿⣿⠀⠀⢸⠇⠀⠐⠉⡆⠀⠀⠀⠀⠀⠀  --0--   &quot;</span><span class="p">,</span>
+                    <span class="s">&quot;⠀⠀⠀⠀⢀⠔⠒⢦⠀⢻⡄⠀⢿⣻⣿⡿⢀⣴⣋⣄⣄⣌⣠⠃⠀⠀⠀⠀⠀⠀  ⎛   ⎞   &quot;</span><span class="p">,</span>
+                    <span class="s">&quot;⠀⠀⠀⠀⠈⠀⢀⡞⠀⠈⠛⣷⣾⣿⣿⣿⣿⣿⣯⣥⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀         &quot;</span><span class="p">,</span>
+                    <span class="s">&quot;⠀⠀⠀⠀⠀⠀⠈⠷⣦⣴⡾⢿⣿⡿⢿⣿⣋⣽⠶⢦⠙⢷⡀⠀⠀⠀⠀⠀⠀⠀         &quot;</span><span class="p">,</span>
+                    <span class="s">&quot;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⡏⢀⡆⠈⠉⠁⡄⠈⡇⠘⢇⠀⢈⡆⠀⠀⠀⠀         &quot;</span><span class="p">,</span>
+                    <span class="s">&quot;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡯⠀⠸⠁⠀⠀⠸⣧⡀⡇⠀⠈⠉⠉⠀⠀⠀⠀⠀         &quot;</span><span class="p">,</span>
+                    <span class="s">&quot;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣇⡴⠁⠀⠀⠀⠀⠙⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀          &quot;</span>
+            <span class="p">},</span>
+        <span class="p">};</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">printPoem</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;A story of a Monkey and Cthulhus&quot;</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">monkeyCount</span> <span class="o">=</span> <span class="n">monkeys</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
+        <span class="c1">// Missing code</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="c1">//hint: missing code</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">monkeyCount</span><span class="p">;</span> <span class="n">row</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">col</span> <span class="o">&lt;</span> <span class="n">monkeys</span><span class="o">[</span><span class="n">row</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">col</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">monkeys</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">col</span><span class="o">]</span> <span class="o">+</span> <span class="s">&quot; &quot;</span><span class="p">);</span>
+                <span class="p">}</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+            <span class="c1">//hint: missing code, another for loop</span>
+        <span class="kt">int</span> <span class="n">cthulhuCount</span> <span class="o">=</span> <span class="n">cthulhus</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">col1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">col1</span> <span class="o">&lt;</span> <span class="n">cthulhuCount</span><span class="p">;</span> <span class="n">col1</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">row1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row1</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">;</span> <span class="n">row1</span><span class="o">++</span><span class="p">){</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">cthulhus</span><span class="o">[</span><span class="n">row1</span><span class="o">][</span><span class="n">col1</span><span class="o">]</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+        <span class="p">}</span>
+        <span class="c1">// End of missing code</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;0000000000000000000000000000000000&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;             THE END              &quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>  <span class="p">{</span>
+        <span class="k">new</span> <span class="n">MonkeyLoop</span><span class="p">().</span><span class="na">printPoem</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">MonkeyLoop</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+A story of a Monkey and Cthulhus
+ʕง ͠° ͟ل͜ ͡°)ʔ  
+  \_⏄_/   
+  --0--    
+  ⎛   ⎞    
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⡀⠀⠀⠀⠀⠀⠀⢎⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ʕง ͠° ͟ل͜ ͡°)ʔ 
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠂⢱⠀⠀⢀⣤⡀⠀⠀⢣⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  \_⏄_/  
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⠻⠉⣧⣿⣿⣿⠀⠀⢸⠇⠀⠐⠉⡆⠀⠀⠀⠀⠀⠀  --0--   
+⠀⠀⠀⠀⢀⠔⠒⢦⠀⢻⡄⠀⢿⣻⣿⡿⢀⣴⣋⣄⣄⣌⣠⠃⠀⠀⠀⠀⠀⠀  ⎛   ⎞   
+⠀⠀⠀⠀⠈⠀⢀⡞⠀⠈⠛⣷⣾⣿⣿⣿⣿⣿⣯⣥⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀         
+⠀⠀⠀⠀⠀⠀⠈⠷⣦⣴⡾⢿⣿⡿⢿⣿⣋⣽⠶⢦⠙⢷⡀⠀⠀⠀⠀⠀⠀⠀         
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⡏⢀⡆⠈⠉⠁⡄⠈⡇⠘⢇⠀⢈⡆⠀⠀⠀⠀         
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡯⠀⠸⠁⠀⠀⠸⣧⡀⡇⠀⠈⠉⠉⠀⠀⠀⠀⠀         
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣇⡴⠁⠀⠀⠀⠀⠙⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀          
+0000000000000000000000000000000000
+             THE END              
 </pre>
 </div>
 </div>
