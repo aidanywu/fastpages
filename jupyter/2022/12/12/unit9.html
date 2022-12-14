@@ -257,8 +257,8 @@ Brazil: { &#34;wins&#34;: 3, &#34;losses&#34;: 2, &#34;draws&#34;: 0 }
 <span class="kn">import</span> <span class="nn">java.time.ZoneId</span><span class="p">;</span>
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span> <span class="p">{</span>
-   <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
-   <span class="kd">private</span> <span class="n">LocalDate</span> <span class="n">birthday</span><span class="p">;</span>
+   <span class="kd">public</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
+   <span class="kd">public</span> <span class="n">LocalDate</span> <span class="n">birthday</span><span class="p">;</span>
 
    <span class="kd">public</span> <span class="nf">Person</span> <span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="n">LocalDate</span> <span class="n">birthday</span><span class="p">){</span>
       <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
@@ -274,13 +274,13 @@ Brazil: { &#34;wins&#34;: 3, &#34;losses&#34;: 2, &#34;draws&#34;: 0 }
    <span class="p">}</span>
 
    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>
-      <span class="k">return</span> <span class="s">&quot;superclass string&quot;</span><span class="p">;</span>
+      <span class="k">return</span> <span class="p">(</span> <span class="s">&quot;{ \&quot;name\&quot;: &quot;</span>  <span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="o">+</span>  <span class="s">&quot;, &quot;</span> <span class="o">+</span> <span class="s">&quot;\&quot;birthday\&quot;: &quot;</span>  <span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="na">birthday</span><span class="o">+</span> <span class="s">&quot; }&quot;</span> <span class="p">);</span>
    <span class="p">}</span>
  <span class="p">}</span>
  
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Student</span> <span class="kd">extends</span> <span class="n">Person</span> <span class="p">{</span>
-   <span class="kd">private</span> <span class="kt">int</span> <span class="n">grade</span><span class="p">;</span>
-   <span class="kd">private</span> <span class="kt">double</span> <span class="n">gpa</span><span class="p">;</span>
+   <span class="kd">public</span> <span class="kt">int</span> <span class="n">grade</span><span class="p">;</span>
+   <span class="kd">public</span> <span class="kt">double</span> <span class="n">gpa</span><span class="p">;</span>
 
    <span class="kd">public</span> <span class="nf">Student</span> <span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="n">LocalDate</span> <span class="n">birthday</span><span class="p">,</span> <span class="kt">int</span> <span class="n">grade</span><span class="p">,</span> <span class="kt">double</span> <span class="n">gpa</span><span class="p">)</span> <span class="p">{</span>
       <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">birthday</span><span class="p">);</span>
@@ -298,7 +298,7 @@ Brazil: { &#34;wins&#34;: 3, &#34;losses&#34;: 2, &#34;draws&#34;: 0 }
 
    <span class="nd">@Override</span>
    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">(){</span>
-      <span class="k">return</span> <span class="s">&quot;student string&quot;</span><span class="p">;</span>
+      <span class="k">return</span> <span class="p">(</span> <span class="s">&quot;{ \&quot;name\&quot;: &quot;</span>  <span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="o">+</span>  <span class="s">&quot;, &quot;</span> <span class="o">+</span> <span class="s">&quot;\&quot;birthday\&quot;: &quot;</span>  <span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="na">birthday</span><span class="o">+</span>  <span class="s">&quot;, &quot;</span> <span class="o">+</span> <span class="s">&quot;\&quot;grade\&quot;: &quot;</span>  <span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="na">grade</span><span class="o">+</span>  <span class="s">&quot;, &quot;</span> <span class="o">+</span> <span class="s">&quot;\&quot;gpa\&quot;: &quot;</span>  <span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="na">gpa</span><span class="o">+</span> <span class="s">&quot; }&quot;</span> <span class="p">);</span>
    <span class="p">}</span>
 <span class="p">}</span>
 
@@ -312,7 +312,7 @@ Brazil: { &#34;wins&#34;: 3, &#34;losses&#34;: 2, &#34;draws&#34;: 0 }
 
    <span class="nd">@Override</span>
    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">(){</span>
-      <span class="k">return</span> <span class="s">&quot;teacher string&quot;</span><span class="p">;</span>
+      <span class="k">return</span> <span class="p">(</span> <span class="s">&quot;{ \&quot;name\&quot;: &quot;</span>  <span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="o">+</span>  <span class="s">&quot;, &quot;</span> <span class="o">+</span> <span class="s">&quot;\&quot;birthday\&quot;: &quot;</span>  <span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="na">birthday</span><span class="o">+</span>  <span class="s">&quot;, &quot;</span> <span class="o">+</span> <span class="s">&quot;\&quot;subject\&quot;: &quot;</span>  <span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="na">subject</span><span class="o">+</span> <span class="s">&quot; }&quot;</span> <span class="p">);</span>
    <span class="p">}</span>
 <span class="p">}</span>
 
@@ -343,9 +343,9 @@ Brazil: { &#34;wins&#34;: 3, &#34;losses&#34;: 2, &#34;draws&#34;: 0 }
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>superclass string
-student string
-teacher string
+<pre>{ &#34;name&#34;: Person, &#34;birthday&#34;: 2000-01-01 }
+{ &#34;name&#34;: Student, &#34;birthday&#34;: 2000-01-01, &#34;grade&#34;: 11, &#34;gpa&#34;: 4.0 }
+{ &#34;name&#34;: Teacher, &#34;birthday&#34;: 2000-01-01, &#34;subject&#34;: Computer Science }
 </pre>
 </div>
 </div>
