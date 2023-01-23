@@ -36,6 +36,8 @@ In the article, it assumed that our passwords stored inside the database was alr
 Since the article coded for /authenticate to return the JWT token inside its body, the frontend would have to take the JWT token and configure it into the browser. This would be susceptible to Cross Site Scripting Attacks. We can avoid forcing the frontend's javascript to set the cookie by coding for /authenticate api's response to automatically set the browser's cookies with the JWT token using the Set-Cookie header. For this part, I followed along with https://reflectoring.io/spring-boot-cookies/ and made some changes to JwtApiController.java. Now the request sent by the browser would contain the JWT token using a HttpOnly cookie, so we have to code JwtRequestFilter.java so it gets the JWT token from the request's Cookie header instead of its Authorization header ([Commit](https://github.com/aidanywu/spring_port/commit/fcecd4e650a894912b5abddc2005f94d46fd8f65)).
 
 ## Testing
+
+### Postman Testing
 Using the existing account's credentials test2@gmail.com and test2 to generate JWT Token through /authenticate.
 ![generating jwt token](https://user-images.githubusercontent.com/56620132/213969351-4f9bedc3-7780-4e24-b908-f63dae90e47d.png)
 
@@ -48,8 +50,18 @@ Trying to access /api/person/ with a wrong jwt token stored in Cookies
 Trying to access /api/person/ with a jwt token that does not have the signature
 ![unauthorized](https://user-images.githubusercontent.com/56620132/214021142-2273a23f-ae4c-493a-9d08-b39ec944890c.png)
 
-Trying to access /api/person/ with generated jwt token stored in Cookies
+Accessing /api/person/ with generated jwt token stored in Cookies header
 ![authorized](https://user-images.githubusercontent.com/56620132/213969894-d5a83af9-614e-45ec-afe9-123d8d422713.png)
+
+### Testing the use of cookies in Chrome console
+At first, when you access http://localhost:8085/, it will return a 401 Unauthorized error because you do not have a jwt cookie.
+![unauthorized](https://user-images.githubusercontent.com/56620132/214109246-3fdde7e3-e602-4810-8896-cb821737a6bb.png)
+We can use Chrome console to model a frontend by using fetch:
+![fetch in console](https://user-images.githubusercontent.com/56620132/214109082-95f1a658-e1be-4a95-8fe3-02542a8891f5.png)
+Notice how we have a jwt cookie now
+![jwt cookie](https://user-images.githubusercontent.com/56620132/214109567-49a77c03-d86f-4685-adaa-d0e9f6ae3a25.png)
+Reload and http://localhost:8085/ should load without 401 error
+![authorized](https://user-images.githubusercontent.com/56620132/214109803-70c12715-a6f5-48e5-9865-757cdb6cedaf.png)
 
 ## What's next
 Roles can be be implemented next based on the old csa project and I am looking at that next.
