@@ -96,12 +96,41 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
-<li class="toc-entry toc-h2"><a href="#the-code">The Code</a></li>
+<li class="toc-entry toc-h2"><a href="#the-code">The Code</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#simple-explanation-of-each-java-file">Simple Explanation of each java file</a></li>
+<li class="toc-entry toc-h3"><a href="#bigger-changes-differing-from-the-article">Bigger changes differing from the article</a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h2"><a href="#testing">Testing</a></li>
 </ul><h2 id="the-code">
 <a class="anchor" href="#the-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Code</h2>
-<p>A majority of the code was taken from https://www.javainuse.com/spring/boot-jwt. The new dependencies we need is in this <a href="https://github.com/aidanywu/spring_port/commit/a5447a6269bd2bae123c415606ac5d0f97db2d25">Commit</a>. This site provided the basic code needed to generate a jwt token and how we would configure the backend to require authorization when accessing a page. (<a href="https://github.com/aidanywu/spring_port/commit/6aad61a5902917e225f3b3dbaf7bd1451b986123">Commit1</a> &amp; <a href="https://github.com/aidanywu/spring_port/commit/08f3cc8c03b44b41ee7c79c3ce2b30ef6165386e">Commit2</a>). JwtTokenUtil.java, just like its name, contains utilities/functions that is needed to generate JWT tokens and get information like the email from the JWT tokens which is needed for making sure the JWT token is valid. JWTUserDetailsService.java implements the Spring Security UserDetailsService interface and overrides the loadUserByUsername so we can later get user details from the database using the username. The name JwtAuthenticationController.java on the article was changed to JwtApiController.java to fit the already existing API controllers and this creates an API endpoint of /authenticate which validates that the given email and password in the body is validate and then generates a JWT token for the credentials if it was valid. We did not need the JwtRequest.java because it is used to store each user as an object and that is the Person class we’ve already coded. We also do not need JwtResponse.java. The JwtRequestFilter.java extends the Spring Web Filter OncePerRequestFilter class and overrides the doFilterInternal function so each request sent to the server is processed through the function. The function checks if the JWT token is valid and sets the Authentication in the context to specify that the current user is authenticated. JwtAuthenticationEntryPoint.java implements AuthenticationEntryPoint and overrides the commence function to specify what to do when a user was not authenticated, which is to return an unauthorized error. WebSecurityConfig.java is our existing SecurityConfig.java. It extends WebSecurityConfigurerAdapter and overrides configure to allow /authenticate to not need the request be authenticated because /authenticate is where you generate the JWT token is get authenticated, add the jwtRequestFilter.java filter to validate the token with every request, and configure other features of web security like a stateless session. This can also be used to allow specific roles when that is configured (as seen in last year’s csa project).</p>
+<ul>
+  <li><a href="https://github.com/aidanywu/spring_port/tree/master/src/main/java/com/nighthawk/spring_portfolio/mvc/jwt">JWT</a></li>
+  <li>
+<a href="https://github.com/aidanywu/spring_port/blob/master/src/main/java/com/nighthawk/spring_portfolio/security/SecurityConfig.java">SecurityConfig</a>
+    <h3 id="simple-explanation-of-each-java-file">
+<a class="anchor" href="#simple-explanation-of-each-java-file" aria-hidden="true"><span class="octicon octicon-link"></span></a>Simple Explanation of each java file</h3>
+    <p>A majority of the code was taken from https://www.javainuse.com/spring/boot-jwt. The new dependencies we need is in this <a href="https://github.com/aidanywu/spring_port/commit/a5447a6269bd2bae123c415606ac5d0f97db2d25">Commit</a>. This site provided the basic code needed to generate a jwt token and how we would configure the backend to require authorization when accessing a page. (<a href="https://github.com/aidanywu/spring_port/commit/6aad61a5902917e225f3b3dbaf7bd1451b986123">Commit1</a> &amp; <a href="https://github.com/aidanywu/spring_port/commit/08f3cc8c03b44b41ee7c79c3ce2b30ef6165386e">Commit2</a>).</p>
+  </li>
+</ul>
 
+<p>JwtTokenUtil.java, just like its name, contains utilities/functions that is needed to generate JWT tokens and get information like the email from the JWT tokens which is needed for making sure the JWT token is valid.</p>
+
+<p>JWTUserDetailsService.java implements the Spring Security UserDetailsService interface and overrides the loadUserByUsername so we can later get user details from the database using the username.</p>
+
+<p>The name JwtAuthenticationController.java on the article was changed to JwtApiController.java to fit the already existing API controllers and this creates an API endpoint of /authenticate which validates that the given email and password in the body is validate and then generates a JWT token for the credentials if it was valid.</p>
+
+<p>We did not need the JwtRequest.java because it is used to store each user as an object and that is the Person class we’ve already coded. We also do not need JwtResponse.java.</p>
+
+<p>The JwtRequestFilter.java extends the Spring Web Filter OncePerRequestFilter class and overrides the doFilterInternal function so each request sent to the server is processed through the function. The function checks if the JWT token is valid and sets the Authentication in the context to specify that the current user is authenticated.</p>
+
+<p>JwtAuthenticationEntryPoint.java implements AuthenticationEntryPoint and overrides the commence function to specify what to do when a user was not authenticated, which is to return an unauthorized error.</p>
+
+<p>WebSecurityConfig.java is our existing SecurityConfig.java. It extends WebSecurityConfigurerAdapter and overrides configure to allow /authenticate to not need the request be authenticated because /authenticate is where you generate the JWT token is get authenticated, add the jwtRequestFilter.java filter to validate the token with every request, and configure other features of web security like a stateless session. This can also be used to allow specific roles when that is configured (as seen in last year’s csa project).</p>
+
+<h3 id="bigger-changes-differing-from-the-article">
+<a class="anchor" href="#bigger-changes-differing-from-the-article" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bigger changes differing from the article</h3>
 <p>JWTUserDetailsService.java was changed from the article because we already have a database storing users while the article hardcoded a user and password because it did not.</p>
 
 <p>In the article, it assumed that our passwords stored inside the database was already encrypted using bcrypt, therefore, we have to configure /post to encrypt the passwords when adding users (<a href="https://github.com/aidanywu/spring_port/commit/5a869fd7fd37883628880a55699aba8394a1cf68">Commit</a>).</p>
