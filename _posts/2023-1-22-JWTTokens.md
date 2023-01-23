@@ -10,6 +10,7 @@ title: JWT Tokens
 ## The Code
 * [JWT](https://github.com/aidanywu/spring_port/tree/master/src/main/java/com/nighthawk/spring_portfolio/mvc/jwt)
 * [SecurityConfig](https://github.com/aidanywu/spring_port/blob/master/src/main/java/com/nighthawk/spring_portfolio/security/SecurityConfig.java)
+
 ### Simple Explanation of each java file
 A majority of the code was taken from https://www.javainuse.com/spring/boot-jwt. The new dependencies we need is in this [Commit](https://github.com/aidanywu/spring_port/commit/a5447a6269bd2bae123c415606ac5d0f97db2d25). This site provided the basic code needed to generate a jwt token and how we would configure the backend to require authorization when accessing a page. ([Commit1](https://github.com/aidanywu/spring_port/commit/6aad61a5902917e225f3b3dbaf7bd1451b986123) & [Commit2](https://github.com/aidanywu/spring_port/commit/08f3cc8c03b44b41ee7c79c3ce2b30ef6165386e)).
 
