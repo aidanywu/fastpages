@@ -102,7 +102,12 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#bigger-changes-differing-from-the-article">Bigger changes differing from the article</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#testing">Testing</a></li>
+<li class="toc-entry toc-h2"><a href="#testing">Testing</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#postman-testing">Postman Testing</a></li>
+<li class="toc-entry toc-h3"><a href="#testing-the-use-of-cookies-in-chrome-console">Testing the use of cookies in Chrome console</a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h2"><a href="#whats-next">What’s next</a></li>
 </ul><h2 id="the-code">
 <a class="anchor" href="#the-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Code</h2>
@@ -139,6 +144,9 @@ window.onload = wrap_img;
 
 <h2 id="testing">
 <a class="anchor" href="#testing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Testing</h2>
+
+<h3 id="postman-testing">
+<a class="anchor" href="#postman-testing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Postman Testing</h3>
 <p>Using the existing account’s credentials test2@gmail.com and test2 to generate JWT Token through /authenticate.
 <img src="https://user-images.githubusercontent.com/56620132/213969351-4f9bedc3-7780-4e24-b908-f63dae90e47d.png" alt="generating jwt token"></p>
 
@@ -151,8 +159,19 @@ window.onload = wrap_img;
 <p>Trying to access /api/person/ with a jwt token that does not have the signature
 <img src="https://user-images.githubusercontent.com/56620132/214021142-2273a23f-ae4c-493a-9d08-b39ec944890c.png" alt="unauthorized"></p>
 
-<p>Trying to access /api/person/ with generated jwt token stored in Cookies
+<p>Accessing /api/person/ with generated jwt token stored in Cookies header
 <img src="https://user-images.githubusercontent.com/56620132/213969894-d5a83af9-614e-45ec-afe9-123d8d422713.png" alt="authorized"></p>
+
+<h3 id="testing-the-use-of-cookies-in-chrome-console">
+<a class="anchor" href="#testing-the-use-of-cookies-in-chrome-console" aria-hidden="true"><span class="octicon octicon-link"></span></a>Testing the use of cookies in Chrome console</h3>
+<p>At first, when you access http://localhost:8085/, it will return a 401 Unauthorized error because you do not have a jwt cookie.
+<img src="https://user-images.githubusercontent.com/56620132/214109246-3fdde7e3-e602-4810-8896-cb821737a6bb.png" alt="unauthorized">
+We can use Chrome console to model a frontend by using fetch:
+<img src="https://user-images.githubusercontent.com/56620132/214109082-95f1a658-e1be-4a95-8fe3-02542a8891f5.png" alt="fetch in console">
+Notice how we have a jwt cookie now
+<img src="https://user-images.githubusercontent.com/56620132/214109567-49a77c03-d86f-4685-adaa-d0e9f6ae3a25.png" alt="jwt cookie">
+Reload and http://localhost:8085/ should load without 401 error
+<img src="https://user-images.githubusercontent.com/56620132/214109803-70c12715-a6f5-48e5-9865-757cdb6cedaf.png" alt="authorized"></p>
 
 <h2 id="whats-next">
 <a class="anchor" href="#whats-next" aria-hidden="true"><span class="octicon octicon-link"></span></a>What’s next</h2>
