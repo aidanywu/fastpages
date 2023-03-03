@@ -1,6 +1,6 @@
 ---
 toc: false
-layout: post
+layout: base
 description: HTML and Markdown
 categories: [markdown]
 title: HTML and Markdown

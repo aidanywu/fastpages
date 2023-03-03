@@ -1,6 +1,6 @@
 ---
 toc: true
-layout: post
+layout: base
 description: Week 2 tangibles
 categories: [markdown]
 comments: true

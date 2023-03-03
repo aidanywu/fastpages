@@ -1,6 +1,6 @@
 ---
 toc: true
-layout: post
+layout: base
 # description: Focus and Habits
 categories: [markdown]
 comments: true

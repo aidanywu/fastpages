@@ -1,6 +1,6 @@
 ---
 toc: true
-layout: post
+layout: base
 description: Extra Credit Notes & Reflection
 categories: [markdown]
 comments: true

@@ -1,6 +1,6 @@
 ---
 toc: true
-layout: post
+layout: base
 description: College Board Final
 categories: [markdown]
 comments: true

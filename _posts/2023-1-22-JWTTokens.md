@@ -1,6 +1,6 @@
 ---
 toc: true
-layout: post
+layout: base
 description: Implementing JWT Tokens into spring boot project
 categories: [markdown]
 comments: true

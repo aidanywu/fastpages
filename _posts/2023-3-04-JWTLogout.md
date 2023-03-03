@@ -1,6 +1,6 @@
 ---
 toc: true
-layout: post
+layout: base
 description: Implementing logout into spring boot project
 categories: [markdown]
 comments: true
