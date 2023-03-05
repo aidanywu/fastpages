@@ -70,54 +70,13 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">JWT Tokens</h1><p class="page-description">Implementing JWT Tokens into spring boot project</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-01-22T00:00:00-06:00" itemprop="datePublished">
-        Jan 22, 2023
-      </time>
-       • <span class="read-time" title="Estimated read time">
-    
-    
-      3 min read
-    
-</span></p>
-
-    
-      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
-      
-        <a class="category-tags-link" href="/fastpages/categories/#markdown">markdown</a>
-        
-      
-      </p>
-    
-
-    </header>
-
-  <div class="post-content e-content" itemprop="articleBody">
-    <ul id="toc" class="section-nav">
-<li class="toc-entry toc-h2"><a href="#the-code">The Code</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#simple-explanation-of-each-java-file">Simple Explanation of each java file</a></li>
-<li class="toc-entry toc-h3"><a href="#bigger-changes-differing-from-the-article">Bigger changes differing from the article</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#testing">Testing</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#postman-testing">Postman Testing</a></li>
-<li class="toc-entry toc-h3"><a href="#testing-the-use-of-cookies-in-chrome-console">Testing the use of cookies in Chrome console</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#whats-next">What’s next</a></li>
-</ul><h2 id="the-code">
-<a class="anchor" href="#the-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Code</h2>
+        <h2 id="the-code">The Code</h2>
 <ul>
   <li><a href="https://github.com/nighthawkcoders/spring_portfolio/tree/master/src/main/java/com/nighthawk/spring_portfolio/mvc/jwt">JWT</a></li>
   <li><a href="https://github.com/nighthawkcoders/spring_portfolio/blob/master/src/main/java/com/nighthawk/spring_portfolio/security/SecurityConfig.java">SecurityConfig</a></li>
 </ul>
 
-<h3 id="simple-explanation-of-each-java-file">
-<a class="anchor" href="#simple-explanation-of-each-java-file" aria-hidden="true"><span class="octicon octicon-link"></span></a>Simple Explanation of each java file</h3>
+<h3 id="simple-explanation-of-each-java-file">Simple Explanation of each java file</h3>
 <p>A majority of the code was taken from https://www.javainuse.com/spring/boot-jwt. The new dependencies we need is in this <a href="https://github.com/nighthawkcoders/spring_portfolio/commit/a5447a6269bd2bae123c415606ac5d0f97db2d25">Commit</a>. This site provided the basic code needed to generate a jwt token and how we would configure the backend to require authorization when accessing a page. (<a href="https://github.com/nighthawkcoders/spring_portfolio/commit/6aad61a5902917e225f3b3dbaf7bd1451b986123">Commit1</a> &amp; <a href="https://github.com/nighthawkcoders/spring_portfolio/commit/08f3cc8c03b44b41ee7c79c3ce2b30ef6165386e">Commit2</a>).</p>
 
 <p>JwtTokenUtil.java, just like its name, contains utilities/functions that is needed to generate JWT tokens and get information like the email from the JWT tokens which is needed for making sure the JWT token is valid.</p>
@@ -134,59 +93,43 @@ window.onload = wrap_img;
 
 <p>WebSecurityConfig.java is our existing SecurityConfig.java. It extends WebSecurityConfigurerAdapter and overrides configure to allow /authenticate to not need the request be authenticated because /authenticate is where you generate the JWT token is get authenticated, add the jwtRequestFilter.java filter to validate the token with every request, and configure other features of web security like a stateless session. This can also be used to allow specific roles when that is configured (as seen in last year’s csa project).</p>
 
-<h3 id="bigger-changes-differing-from-the-article">
-<a class="anchor" href="#bigger-changes-differing-from-the-article" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bigger changes differing from the article</h3>
+<h3 id="bigger-changes-differing-from-the-article">Bigger changes differing from the article</h3>
 <p>JWTUserDetailsService.java was changed from the article because we already have a database storing users while the article hardcoded a user and password because it did not.</p>
 
 <p>In the article, it assumed that our passwords stored inside the database was already encrypted using bcrypt, therefore, we have to configure /post to encrypt the passwords when adding users (<a href="https://github.com/nighthawkcoders/spring_portfolio/commit/5a869fd7fd37883628880a55699aba8394a1cf68">Commit</a>).</p>
 
 <p>Since the article coded for /authenticate to return the JWT token inside its body, the frontend would have to take the JWT token and configure it into the browser. This would be susceptible to Cross Site Scripting Attacks. We can avoid forcing the frontend’s javascript to set the cookie by coding for /authenticate api’s response to automatically set the browser’s cookies with the JWT token using the Set-Cookie header. For this part, I followed along with https://reflectoring.io/spring-boot-cookies/ and made some changes to JwtApiController.java. Now the request sent by the browser would contain the JWT token using a HttpOnly cookie, so we have to code JwtRequestFilter.java so it gets the JWT token from the request’s Cookie header instead of its Authorization header (<a href="https://github.com/nighthawkcoders/spring_portfolio/commit/fcecd4e650a894912b5abddc2005f94d46fd8f65">Commit</a>).</p>
 
-<h2 id="testing">
-<a class="anchor" href="#testing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Testing</h2>
+<h2 id="testing">Testing</h2>
 
-<h3 id="postman-testing">
-<a class="anchor" href="#postman-testing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Postman Testing</h3>
+<h3 id="postman-testing">Postman Testing</h3>
 <p>Using the existing account’s credentials test2@gmail.com and test2 to generate JWT Token through /authenticate.
-<img src="https://user-images.githubusercontent.com/56620132/213969351-4f9bedc3-7780-4e24-b908-f63dae90e47d.png" alt="generating jwt token"></p>
+<img src="https://user-images.githubusercontent.com/56620132/213969351-4f9bedc3-7780-4e24-b908-f63dae90e47d.png" alt="generating jwt token" /></p>
 
 <p>Trying to access /api/person/ without jwt token stored in Cookies
-<img src="https://user-images.githubusercontent.com/56620132/213969664-91397851-1484-4169-8187-e3a0ea8fda0d.png" alt="unauthorized"></p>
+<img src="https://user-images.githubusercontent.com/56620132/213969664-91397851-1484-4169-8187-e3a0ea8fda0d.png" alt="unauthorized" /></p>
 
 <p>Trying to access /api/person/ with a wrong jwt token stored in Cookies
-<img src="https://user-images.githubusercontent.com/56620132/214020929-ef141530-d238-4a0a-9b75-4908a6bb6bc8.png" alt="unauthorized"></p>
+<img src="https://user-images.githubusercontent.com/56620132/214020929-ef141530-d238-4a0a-9b75-4908a6bb6bc8.png" alt="unauthorized" /></p>
 
 <p>Trying to access /api/person/ with a jwt token that does not have the signature
-<img src="https://user-images.githubusercontent.com/56620132/214021142-2273a23f-ae4c-493a-9d08-b39ec944890c.png" alt="unauthorized"></p>
+<img src="https://user-images.githubusercontent.com/56620132/214021142-2273a23f-ae4c-493a-9d08-b39ec944890c.png" alt="unauthorized" /></p>
 
 <p>Accessing /api/person/ with generated jwt token stored in Cookies header
-<img src="https://user-images.githubusercontent.com/56620132/213969894-d5a83af9-614e-45ec-afe9-123d8d422713.png" alt="authorized"></p>
+<img src="https://user-images.githubusercontent.com/56620132/213969894-d5a83af9-614e-45ec-afe9-123d8d422713.png" alt="authorized" /></p>
 
-<h3 id="testing-the-use-of-cookies-in-chrome-console">
-<a class="anchor" href="#testing-the-use-of-cookies-in-chrome-console" aria-hidden="true"><span class="octicon octicon-link"></span></a>Testing the use of cookies in Chrome console</h3>
+<h3 id="testing-the-use-of-cookies-in-chrome-console">Testing the use of cookies in Chrome console</h3>
 <p>At first, when you access http://localhost:8085/, it will return a 401 Unauthorized error because you do not have a jwt cookie.
-<img src="https://user-images.githubusercontent.com/56620132/214109246-3fdde7e3-e602-4810-8896-cb821737a6bb.png" alt="unauthorized">
+<img src="https://user-images.githubusercontent.com/56620132/214109246-3fdde7e3-e602-4810-8896-cb821737a6bb.png" alt="unauthorized" />
 We can use Chrome console to model a frontend by using fetch:
-<img src="https://user-images.githubusercontent.com/56620132/214109082-95f1a658-e1be-4a95-8fe3-02542a8891f5.png" alt="fetch in console">
+<img src="https://user-images.githubusercontent.com/56620132/214109082-95f1a658-e1be-4a95-8fe3-02542a8891f5.png" alt="fetch in console" />
 Notice how we have a jwt cookie now
-<img src="https://user-images.githubusercontent.com/56620132/214109567-49a77c03-d86f-4685-adaa-d0e9f6ae3a25.png" alt="jwt cookie">
+<img src="https://user-images.githubusercontent.com/56620132/214109567-49a77c03-d86f-4685-adaa-d0e9f6ae3a25.png" alt="jwt cookie" />
 Reload and http://localhost:8085/ should load without 401 error
-<img src="https://user-images.githubusercontent.com/56620132/214109803-70c12715-a6f5-48e5-9865-757cdb6cedaf.png" alt="authorized"></p>
+<img src="https://user-images.githubusercontent.com/56620132/214109803-70c12715-a6f5-48e5-9865-757cdb6cedaf.png" alt="authorized" /></p>
 
-<h2 id="whats-next">
-<a class="anchor" href="#whats-next" aria-hidden="true"><span class="octicon octicon-link"></span></a>What’s next</h2>
+<h2 id="whats-next">What’s next</h2>
 <p>Roles can be be implemented next based on the old csa project and I am looking at that next.</p>
-
-  </div><!-- from https://github.com/utterance/utterances -->
-<script src="https://utteranc.es/client.js"
-        repo="willcyber/fastpages"
-        issue-term="title"
-        label="blogpost-comment"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script><a class="u-url" href="/fastpages/markdown/2023/01/22/JWTTokens.html" hidden></a>
-</article>
 
       </div>
     </main><footer class="site-footer h-card">
