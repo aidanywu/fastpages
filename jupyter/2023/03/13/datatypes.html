@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Vocabs | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Vocabs" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<link rel="canonical" href="https://willcyber.github.io/fastpages/jupyter/2023/03/13/datatypes.html" />
+<meta property="og:url" content="https://willcyber.github.io/fastpages/jupyter/2023/03/13/datatypes.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-03-13T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Vocabs" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-13T00:00:00-05:00","datePublished":"2023-03-13T00:00:00-05:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Vocabs","mainEntityOfPage":{"@type":"WebPage","@id":"https://willcyber.github.io/fastpages/jupyter/2023/03/13/datatypes.html"},"url":"https://willcyber.github.io/fastpages/jupyter/2023/03/13/datatypes.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/fastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://willcyber.github.io/fastpages/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/fastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/fastpages/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/fastpages/about/">About Me</a><a class="page-link" href="/fastpages/search/">Search</a><a class="page-link" href="/fastpages/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-03-13-datatypes.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="2015-CB-MC">2015 CB MC<a class="anchor-link" href="#2015-CB-MC"> </a></h2><h3 id="Score:-36/39">Score: 36/39<a class="anchor-link" href="#Score:-36/39"> </a></h3><p><img src="https://user-images.githubusercontent.com/56620132/224645665-3b387058-cf0d-4710-8036-870e2912577d.png" alt="cbmcscore" /></p>
+<h3 id="Corrections">Corrections<a class="anchor-link" href="#Corrections"> </a></h3><p>12  I got De Morgan's laws wrong. C is wrong because when x and y are both true, (x &amp;&amp; y) is true and (x || y) is true however, !(x ||y) is false. Therefore, (x &amp;&amp; y) &amp;&amp; !(x || y) will always be false. B is right because of De Morgan’s Law: the value of !(x || y) is equivalent to !x &amp;&amp; !y. The only time x &amp;&amp; y is true is when both x and y are true. When x and y are both true, !x &amp;&amp; !y is false. Therefore, (x &amp;&amp; y) &amp;&amp; (!x &amp;&amp; !y) will always be false as will (x &amp;&amp; y) &amp;&amp; !(x ||y).</p>
+<p>20  D is wrong because index is returned instead of m. The outer loop starts at 0 and loops through all the indices in arr. The inner loop starts at the index that is one more than outer and iterates through all indices to the right of this element. For each iteration of the inner loop, the element at the current value of outer is compared with each subsequent element. If the elements are equal, then count is incremented. This results in counting the number of occurrences of each value in the arr. After the inner loop terminates, if the number of occurrences of the current value is greater than previous highest count, the new count is assigned to m and the index of this element is stored in index. The method then returns the value of index, which represents the index of a value that occurs most often in nums. Therefore, E is correct.</p>
+<p>21  C is wrong because subtracting 1 would cause the last element in the list to be skipped so C is wrong. D is correct because to determine the size of an ArrayList we need to call the method size(). Each word will be separated by a comma, but no comma should appear after the last element in the list. Therefore, a comma is added as long as k does not equal the last index, sizeOfList – 1, since list indices start at 0.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="2017-FRQ-Q1-(Methods-and-Control-Structures-question-type)">2017 FRQ Q1 (Methods and Control Structures question type)<a class="anchor-link" href="#2017-FRQ-Q1-(Methods-and-Control-Structures-question-type)"> </a></h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="p">;</span>
+
+<span class="n">public</span> <span class="k">class</span> <span class="nc">Digits</span> <span class="p">{</span>
+    <span class="o">/**</span> <span class="n">The</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">digits</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">number</span> <span class="n">used</span> <span class="n">to</span> <span class="n">construct</span> <span class="n">this</span> <span class="nb">object</span><span class="o">.</span>
+     <span class="o">*</span>  <span class="n">The</span> <span class="n">digits</span> <span class="n">appear</span> <span class="ow">in</span> <span class="n">the</span> <span class="nb">list</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">same</span> <span class="n">order</span> <span class="ow">in</span> <span class="n">which</span> <span class="n">they</span> <span class="n">appear</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">original</span> <span class="n">number</span><span class="o">.</span>
+     <span class="o">*/</span>
+    <span class="n">private</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">digitList</span><span class="p">;</span>
+
+    <span class="o">/**</span> <span class="n">Constructs</span> <span class="n">a</span> <span class="n">Digits</span> <span class="nb">object</span> <span class="n">that</span> <span class="n">represents</span> <span class="n">num</span><span class="o">.</span>
+     <span class="o">*</span>  <span class="n">Precondition</span><span class="p">:</span> <span class="n">num</span> <span class="o">&gt;=</span> <span class="mi">0</span>
+     <span class="o">*/</span>
+    <span class="n">public</span> <span class="n">Digits</span><span class="p">(</span><span class="nb">int</span> <span class="n">num</span><span class="p">)</span> <span class="p">{</span>
+        
+    <span class="p">}</span>
+
+    <span class="o">/**</span> <span class="n">Returns</span> <span class="n">true</span> <span class="k">if</span> <span class="n">the</span> <span class="n">digits</span> <span class="ow">in</span> <span class="n">this</span> <span class="n">Digits</span> <span class="nb">object</span> <span class="n">are</span> <span class="ow">in</span> <span class="n">strictly</span> <span class="n">increasing</span> <span class="n">order</span><span class="p">;</span>
+     <span class="o">*</span>          <span class="n">false</span> <span class="n">otherwise</span><span class="o">.</span>
+     <span class="o">*/</span>
+    <span class="n">public</span> <span class="n">boolean</span> <span class="n">isStrictlyIncreasing</span><span class="p">()</span> <span class="p">{</span>
+        
+    <span class="p">}</span>
+
+    <span class="n">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">Args</span><span class="p">)</span> <span class="p">{</span>
+        
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/fastpages/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://willcyber.github.io/fastpages/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/fastpages/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
