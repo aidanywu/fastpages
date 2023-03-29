@@ -7,6 +7,14 @@ title: CSUSM Event Reflection
 ---
 # Notes
 * Ds in school but still went to CSUSM
+  * various pathways such as computer science, computer engineering, electrical engineering, mechanical engineering, robotics, and STEM
+* Mechanical engineering is heavily based in physics, and many students at Cal State San Marcos go through this program
+* Being involved in clubs and internships is important during undergraduate years, and internships can also help in determining one's interests and exposing them to experiences
+  * Internships are also an important way to be a part of research and get into college
+  * Google along with school events can be used to find so many different internship opportunities
+* Scholarships can be found for various interests, and it is possible to get paid to pursue these interests
+  * Scholarships exist for a lot things
+* College debt is a real and scary thing, and there are two types of loans: subsidized loans, which are provided by the government, and unsubsidized loans, which are not based on financial aid for undergraduate and graduate students.
 
 
 # Reflection
