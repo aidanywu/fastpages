@@ -99,13 +99,13 @@ window.onload = wrap_img;
     <span class="kd">public</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">getLibrary</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">return</span> <span class="n">library</span><span class="p">.</span><span class="na">toString</span><span class="p">();</span>
     <span class="p">}</span>
-    <span class="c1">// public boolean getExpired() {</span>
-    <span class="c1">//     boolean expired = this.getTimeLeft() &lt;= 0</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">getExpired</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kt">boolean</span> <span class="n">expired</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">getTimeLeft</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="c1">//     if (expired) {</span>
     <span class="c1">//         this.library.remove()</span>
     <span class="c1">//     }</span>
-    <span class="c1">//     return expired;</span>
-    <span class="c1">// }</span>
+        <span class="k">return</span> <span class="n">expired</span><span class="p">;</span>
+    <span class="p">}</span>
     <span class="kd">public</span> <span class="kt">long</span> <span class="nf">getShelfLife</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">shelfLife</span><span class="p">;</span>
     <span class="p">}</span>
@@ -232,19 +232,19 @@ Libary Book Count: 3
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>{title: novel1}
-7
+5
 me
 10000000000
-30666863710722
-9998852039
+32817596657688
+9993062450
 false
-4998516317
+4990939661
 false
--502810119
+-512375623
 true
-9495881261
+9484054638
 false
-[{title: novel1}, {title: novel2}, {title: novel1}, {title: novel2}]
+[{title: novel1}, {title: novel2}]
 </pre>
 </div>
 </div>
@@ -264,13 +264,12 @@ false
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Textbook</span> <span class="kd">extends</span> <span class="n">Book</span> <span class="p">{</span>
     <span class="kd">private</span> <span class="n">String</span> <span class="n">publishingCompany</span><span class="p">;</span>
-    <span class="kd">private</span> <span class="kt">long</span> <span class="n">checkoutTime</span><span class="p">;</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addShelfLife</span><span class="p">()</span> <span class="p">{</span>
         <span class="kd">super</span><span class="p">.</span><span class="na">shelfLife</span> <span class="o">+=</span> <span class="p">(</span><span class="kt">long</span><span class="p">)</span><span class="mi">1000000000</span><span class="o">*</span><span class="mi">10</span><span class="p">;</span>
     <span class="p">}</span>
     <span class="kd">public</span> <span class="nf">Textbook</span><span class="p">(</span><span class="n">String</span> <span class="n">title</span><span class="p">)</span> <span class="p">{</span>
         <span class="kd">super</span><span class="p">(</span><span class="n">title</span><span class="p">);</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">checkoutTime</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">time</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
         <span class="k">this</span><span class="p">.</span><span class="na">addShelfLife</span><span class="p">();</span>
         <span class="kd">super</span><span class="p">.</span><span class="na">library</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
     <span class="p">}</span>
@@ -279,9 +278,8 @@ false
     <span class="p">}</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setPublishingCompany</span><span class="p">(</span><span class="n">String</span> <span class="n">publishingCompany</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">this</span><span class="p">.</span><span class="na">publishingCompany</span> <span class="o">=</span> <span class="n">publishingCompany</span><span class="p">;</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">setShelfLife</span><span class="p">();</span>
     <span class="p">}</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">testerT</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">testerT</span><span class="p">()</span> <span class="kd">throws</span> <span class="n">InterruptedException</span> <span class="p">{</span>
         <span class="n">Novel</span> <span class="n">tb1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Novel</span><span class="p">(</span><span class="s">&quot;tb1&quot;</span><span class="p">);</span>
         <span class="n">Novel</span> <span class="n">tb2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Novel</span><span class="p">(</span><span class="s">&quot;tb2&quot;</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">tb1</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
@@ -298,12 +296,38 @@ false
         <span class="n">Thread</span><span class="p">.</span><span class="na">sleep</span><span class="p">(</span><span class="mi">5500</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">tb1</span><span class="p">.</span><span class="na">getTimeLeft</span><span class="p">());</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">tb1</span><span class="p">.</span><span class="na">getExpired</span><span class="p">());</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Novel</span><span class="p">.</span><span class="na">getLibrary</span><span class="p">());</span>
     <span class="p">}</span>
 <span class="p">}</span>
 <span class="n">Textbook</span><span class="p">.</span><span class="na">testerT</span><span class="p">();</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{title: tb1}
+7
+me
+10000000000
+32850670176550
+9996827872
+false
+4995532203
+false
+-507085905
+true
+[{title: novel1}, {title: novel2}, {title: tb1}, {title: tb2}]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
