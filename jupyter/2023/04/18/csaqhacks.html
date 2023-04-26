@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>CSAQ Hacks | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="CSAQ Hacks" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<link rel="canonical" href="https://willcyber.github.io/fastpages/jupyter/2023/04/18/csaqhacks.html" />
+<meta property="og:url" content="https://willcyber.github.io/fastpages/jupyter/2023/04/18/csaqhacks.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-04-18T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="CSAQ Hacks" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-18T00:00:00-05:00","datePublished":"2023-04-18T00:00:00-05:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"CSAQ Hacks","mainEntityOfPage":{"@type":"WebPage","@id":"https://willcyber.github.io/fastpages/jupyter/2023/04/18/csaqhacks.html"},"url":"https://willcyber.github.io/fastpages/jupyter/2023/04/18/csaqhacks.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/fastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://willcyber.github.io/fastpages/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/fastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/fastpages/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/fastpages/about/">About Me</a><a class="page-link" href="/fastpages/search/">Search</a><a class="page-link" href="/fastpages/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-04-18-csaqhacks.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Merge-Sort-Hack-#1">Merge Sort Hack #1<a class="anchor-link" href="#Merge-Sort-Hack-#1"> </a></h1><p>Use the integer mergesort that we created and adapt it to sort an array of Java String objects. We recommend using the compareTo() method of the String class for this.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Hack</span> <span class="p">{</span>
+    <span class="kt">void</span> <span class="nf">merge</span><span class="p">(</span><span class="n">String</span> <span class="n">arr</span><span class="o">[]</span><span class="p">,</span> <span class="kt">int</span> <span class="n">l</span><span class="p">,</span> <span class="kt">int</span> <span class="n">m</span><span class="p">,</span> <span class="kt">int</span> <span class="n">r</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// Find the sizes of two subarrays to be merged</span>
+        <span class="kt">int</span> <span class="n">n1</span> <span class="o">=</span> <span class="n">m</span> <span class="o">-</span> <span class="n">l</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">n2</span> <span class="o">=</span> <span class="n">r</span> <span class="o">-</span> <span class="n">m</span><span class="p">;</span>
+
+        <span class="cm">/* Create temp arrays */</span>
+        <span class="n">String</span><span class="o">[]</span> <span class="n">L</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[</span><span class="n">n1</span><span class="o">]</span><span class="p">;</span>
+        <span class="n">String</span><span class="o">[]</span> <span class="n">R</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[</span><span class="n">n2</span><span class="o">]</span><span class="p">;</span>
+
+        <span class="cm">/* Copy data to temp arrays */</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n1</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+            <span class="n">L</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">l</span> <span class="o">+</span> <span class="n">i</span><span class="o">]</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n2</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span>
+            <span class="n">R</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">m</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">j</span><span class="o">]</span><span class="p">;</span>
+
+        <span class="cm">/* Merge the temp arrays */</span>
+
+        <span class="c1">// Initial indexes of first and second subarrays</span>
+        <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+        <span class="c1">// Initial index of merged subarray array</span>
+        <span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">l</span><span class="p">;</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">n1</span> <span class="o">&amp;&amp;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n2</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">L</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">compareTo</span><span class="p">(</span><span class="n">R</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">L</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+                <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">else</span> <span class="p">{</span>
+                <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">R</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
+                <span class="n">j</span><span class="o">++</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="n">k</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="cm">/* Copy remaining elements of L[] if any */</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">n1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">L</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+            <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+            <span class="n">k</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="cm">/* Copy remaining elements of R[] if any */</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">j</span> <span class="o">&lt;</span> <span class="n">n2</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">R</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
+            <span class="n">j</span><span class="o">++</span><span class="p">;</span>
+            <span class="n">k</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sort</span><span class="p">(</span><span class="n">String</span> <span class="n">arr</span><span class="o">[]</span><span class="p">,</span> <span class="kt">int</span> <span class="n">l</span><span class="p">,</span> <span class="kt">int</span> <span class="n">r</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">l</span> <span class="o">&lt;</span> <span class="n">r</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="n">l</span> <span class="o">+</span> <span class="p">(</span><span class="n">r</span> <span class="o">-</span> <span class="n">l</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+
+            <span class="n">sort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">mid</span><span class="p">);</span>
+            <span class="n">sort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">r</span><span class="p">);</span>
+
+            <span class="c1">//run merge</span>
+            <span class="n">merge</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">mid</span><span class="p">,</span> <span class="n">r</span><span class="p">);</span>
+        <span class="p">}</span>
+
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Hack</span> <span class="n">hack</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Hack</span><span class="p">();</span>
+        <span class="n">String</span><span class="o">[]</span> <span class="n">test</span> <span class="o">=</span> <span class="p">{</span><span class="s">&quot;string1&quot;</span><span class="p">,</span> <span class="s">&quot;ddfff&quot;</span><span class="p">,</span> <span class="s">&quot;w32wfz&quot;</span><span class="p">,</span> <span class="s">&quot;okmqji&quot;</span><span class="p">,</span> <span class="s">&quot;alih&quot;</span><span class="p">};</span>
+        <span class="n">hack</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">test</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">test</span><span class="p">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">test</span><span class="p">));</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">Hack</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[alih, ddfff, okmqji, string1, w32wfz]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Merge-Sort-Hack-#2-Option-1">Merge Sort Hack #2 Option 1<a class="anchor-link" href="#Merge-Sort-Hack-#2-Option-1"> </a></h1><p>Use the integer mergesort that we created and adapt it to use any other (non-primitive) object type. It should be clear how these objects are being sorted by the merge sort.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> *  Implementation of a Double Linked List;  forward and backward links point to adjacent Nodes.</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span>
+
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span>
+ <span class="p">{</span>
+     <span class="kd">private</span> <span class="n">T</span> <span class="n">data</span><span class="p">;</span>
+     <span class="kd">private</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">prevNode</span><span class="p">,</span> <span class="n">nextNode</span><span class="p">;</span>
+ 
+     <span class="cm">/**</span>
+<span class="cm">      *  Constructs a new element</span>
+<span class="cm">      *</span>
+<span class="cm">      * @param  data, data of object</span>
+<span class="cm">      * @param  node, previous node</span>
+<span class="cm">      */</span>
+     <span class="kd">public</span> <span class="nf">LinkedList</span><span class="p">(</span><span class="n">T</span> <span class="n">data</span><span class="p">,</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">node</span><span class="p">)</span>
+     <span class="p">{</span>
+         <span class="k">this</span><span class="p">.</span><span class="na">setData</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+         <span class="k">this</span><span class="p">.</span><span class="na">setPrevNode</span><span class="p">(</span><span class="n">node</span><span class="p">);</span>
+         <span class="k">this</span><span class="p">.</span><span class="na">setNextNode</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+     <span class="p">}</span>
+ 
+     <span class="cm">/**</span>
+<span class="cm">      *  Clone an object,</span>
+<span class="cm">      *</span>
+<span class="cm">      * @param  node  object to clone</span>
+<span class="cm">      */</span>
+     <span class="kd">public</span> <span class="nf">LinkedList</span><span class="p">(</span><span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">node</span><span class="p">)</span>
+     <span class="p">{</span>
+         <span class="k">this</span><span class="p">.</span><span class="na">setData</span><span class="p">(</span><span class="n">node</span><span class="p">.</span><span class="na">data</span><span class="p">);</span>
+         <span class="k">this</span><span class="p">.</span><span class="na">setPrevNode</span><span class="p">(</span><span class="n">node</span><span class="p">.</span><span class="na">prevNode</span><span class="p">);</span>
+         <span class="k">this</span><span class="p">.</span><span class="na">setNextNode</span><span class="p">(</span><span class="n">node</span><span class="p">.</span><span class="na">nextNode</span><span class="p">);</span>
+     <span class="p">}</span>
+ 
+     <span class="cm">/**</span>
+<span class="cm">      *  Setter for T data in DoubleLinkedNode object</span>
+<span class="cm">      *</span>
+<span class="cm">      * @param  data, update data of object</span>
+<span class="cm">      */</span>
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setData</span><span class="p">(</span><span class="n">T</span> <span class="n">data</span><span class="p">)</span>
+     <span class="p">{</span>
+         <span class="k">this</span><span class="p">.</span><span class="na">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">;</span>
+     <span class="p">}</span>
+ 
+     <span class="cm">/**</span>
+<span class="cm">      *  Returns T data for this element</span>
+<span class="cm">      *</span>
+<span class="cm">      * @return  data associated with object</span>
+<span class="cm">      */</span>
+     <span class="kd">public</span> <span class="n">T</span> <span class="nf">getData</span><span class="p">()</span>
+     <span class="p">{</span>
+         <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">data</span><span class="p">;</span>
+     <span class="p">}</span>
+ 
+     <span class="cm">/**</span>
+<span class="cm">      *  Setter for prevNode in DoubleLinkedNode object</span>
+<span class="cm">      *</span>
+<span class="cm">      * @param node, prevNode to current Object</span>
+<span class="cm">      */</span>
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setPrevNode</span><span class="p">(</span><span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">node</span><span class="p">)</span>
+     <span class="p">{</span>
+         <span class="k">this</span><span class="p">.</span><span class="na">prevNode</span> <span class="o">=</span> <span class="n">node</span><span class="p">;</span>
+     <span class="p">}</span>
+ 
+     <span class="cm">/**</span>
+<span class="cm">      *  Setter for nextNode in DoubleLinkedNode object</span>
+<span class="cm">      *</span>
+<span class="cm">      * @param node, nextNode to current Object</span>
+<span class="cm">      */</span>
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setNextNode</span><span class="p">(</span><span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">node</span><span class="p">)</span>
+     <span class="p">{</span>
+         <span class="k">this</span><span class="p">.</span><span class="na">nextNode</span> <span class="o">=</span> <span class="n">node</span><span class="p">;</span>
+     <span class="p">}</span>
+ 
+ 
+     <span class="cm">/**</span>
+<span class="cm">      *  Returns reference to previous object in list</span>
+<span class="cm">      *</span>
+<span class="cm">      * @return  the previous object in the list</span>
+<span class="cm">      */</span>
+     <span class="kd">public</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">getPrevious</span><span class="p">()</span>
+     <span class="p">{</span>
+         <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">prevNode</span><span class="p">;</span>
+     <span class="p">}</span>
+ 
+     <span class="cm">/**</span>
+<span class="cm">      *  Returns reference to next object in list</span>
+<span class="cm">      *</span>
+<span class="cm">      * @return  the next object in the list</span>
+<span class="cm">      */</span>
+     <span class="kd">public</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">getNext</span><span class="p">()</span>
+     <span class="p">{</span>
+         <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">nextNode</span><span class="p">;</span>
+     <span class="p">}</span>
+
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setNext</span><span class="p">(</span><span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">next</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">nextNode</span> <span class="o">=</span> <span class="n">next</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="c1">// public void setNext(T data) {</span>
+    <span class="c1">//     this.nextNode = new LinkedList&lt;&gt;(data);</span>
+    <span class="c1">// }</span>
+    
+ 
+ <span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Iterator</span><span class="p">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Queue Iterator</span>
+<span class="cm"> *</span>
+<span class="cm"> * 1. &quot;has a&quot; current reference in Queue</span>
+<span class="cm"> * 2. supports iterable required methods for next that returns a generic T Object</span>
+<span class="cm"> */</span>
+<span class="kd">class</span> <span class="nc">QueueIterator</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="kd">implements</span> <span class="n">Iterator</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">current</span><span class="p">;</span>  <span class="c1">// current element in iteration</span>
+
+    <span class="c1">// QueueIterator is pointed to the head of the list for iteration</span>
+    <span class="kd">public</span> <span class="nf">QueueIterator</span><span class="p">(</span><span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">head</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">current</span> <span class="o">=</span> <span class="n">head</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// hasNext informs if next element exists</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">hasNext</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">current</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// next returns data object and advances to next position in queue</span>
+    <span class="kd">public</span> <span class="n">T</span> <span class="nf">next</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">T</span> <span class="n">data</span> <span class="o">=</span> <span class="n">current</span><span class="p">.</span><span class="na">getData</span><span class="p">();</span>
+        <span class="n">current</span> <span class="o">=</span> <span class="n">current</span><span class="p">.</span><span class="na">getNext</span><span class="p">();</span>
+        <span class="k">return</span> <span class="n">data</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Queue: custom implementation</span>
+<span class="cm"> * @author     John Mortensen</span>
+<span class="cm"> *</span>
+<span class="cm"> * 1. Uses custom LinkedList of Generic type T</span>
+<span class="cm"> * 2. Implements Iterable</span>
+<span class="cm"> * 3. &quot;has a&quot; LinkedList for head and tail</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Queue</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="kd">implements</span> <span class="n">Iterable</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">head</span> <span class="o">=</span> <span class="kc">null</span><span class="p">,</span> <span class="n">tail</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     *  Add a new object at the end of the Queue,</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param  data,  is the data to be inserted in the Queue.</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">add</span><span class="p">(</span><span class="n">T</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// add new object to end of Queue</span>
+        <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">tail</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="kc">null</span><span class="p">);</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">head</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span>  <span class="c1">// initial condition</span>
+            <span class="k">this</span><span class="p">.</span><span class="na">head</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">tail</span> <span class="o">=</span> <span class="n">tail</span><span class="p">;</span>
+        <span class="k">else</span> <span class="p">{</span>  <span class="c1">// nodes in queue</span>
+            <span class="k">this</span><span class="p">.</span><span class="na">tail</span><span class="p">.</span><span class="na">setNextNode</span><span class="p">(</span><span class="n">tail</span><span class="p">);</span> <span class="c1">// current tail points to new tail</span>
+            <span class="n">tail</span><span class="p">.</span><span class="na">setPrevNode</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">tail</span><span class="p">);</span>
+            <span class="k">this</span><span class="p">.</span><span class="na">tail</span> <span class="o">=</span> <span class="n">tail</span><span class="p">;</span>  <span class="c1">// update tail</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addList</span><span class="p">(</span><span class="n">T</span><span class="o">[]</span> <span class="n">lists</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">T</span> <span class="n">data</span> <span class="p">:</span> <span class="n">lists</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     *  Returns the data of head.</span>
+<span class="cm">     *</span>
+<span class="cm">     * @return  data, the dequeued data</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="n">T</span> <span class="nf">delete</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">T</span> <span class="n">data</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">peek</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">tail</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// initial condition</span>
+            <span class="k">this</span><span class="p">.</span><span class="na">head</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">head</span><span class="p">.</span><span class="na">getNext</span><span class="p">();</span> <span class="c1">// current tail points to new tail</span>
+            <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">head</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">this</span><span class="p">.</span><span class="na">head</span><span class="p">.</span><span class="na">setPrevNode</span><span class="p">(</span><span class="n">tail</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">data</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     *  Returns the data of head.</span>
+<span class="cm">     *</span>
+<span class="cm">     * @return  this.head.getData(), the head data in Queue.</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="n">T</span> <span class="nf">peek</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">head</span><span class="p">.</span><span class="na">getData</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     *  Returns the head object.</span>
+<span class="cm">     *</span>
+<span class="cm">     * @return  this.head, the head object in Queue.</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">getHead</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">head</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     *  Returns the tail object.</span>
+<span class="cm">     *</span>
+<span class="cm">     * @return  this.tail, the last object in Queue</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">getTail</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">tail</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     *  Returns the iterator object.</span>
+<span class="cm">     *</span>
+<span class="cm">     * @return  this, instance of object</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="n">Iterator</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">iterator</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="n">QueueIterator</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">head</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * Returns if queue is empty</span>
+<span class="cm">     * </span>
+<span class="cm">     * @return boolean if it is empty</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isEmpty</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">head</span> <span class="o">==</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * Changes the head</span>
+<span class="cm">     * </span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setHead</span><span class="p">(</span><span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">h</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">head</span> <span class="o">=</span> <span class="n">h</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * Returns size of queue</span>
+<span class="cm">     * </span>
+<span class="cm">     * @return size of queue</span>
+<span class="cm">     */</span> 
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">size</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">sz</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">T</span> <span class="n">e</span><span class="p">:</span> <span class="k">this</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">sz</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">sz</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>
+      <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+      <span class="n">String</span> <span class="n">str</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">;</span>
+      <span class="k">for</span> <span class="p">(</span><span class="n">T</span> <span class="n">e</span> <span class="p">:</span> <span class="k">this</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">str</span> <span class="o">+=</span> <span class="n">e</span> <span class="o">+</span> <span class="s">&quot; &quot;</span><span class="p">;</span>
+        <span class="n">count</span><span class="o">++</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="k">return</span> <span class="s">&quot;count: &quot;</span> <span class="o">+</span> <span class="n">count</span> <span class="o">+</span> <span class="s">&quot;, data: &quot;</span> <span class="o">+</span> <span class="n">str</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">Sorter</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">stime</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">etime</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">difftime</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">compares</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">swaps</span><span class="p">;</span>
+
+
+    <span class="kd">public</span> <span class="nf">Sorter</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">abstract</span> <span class="kd">public</span> <span class="n">Queue</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">sort</span><span class="p">(</span><span class="n">Queue</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">list</span><span class="p">,</span> <span class="kt">boolean</span> <span class="n">verbose</span><span class="p">);</span>
+
+    <span class="kd">public</span> <span class="n">Queue</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">sort</span><span class="p">(</span><span class="n">Queue</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">list</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">list</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">start</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">stime</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">end</span><span class="p">()</span>  <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">etime</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">elapsedtime</span><span class="p">()</span>  <span class="p">{</span>
+        <span class="n">difftime</span> <span class="o">=</span> <span class="n">etime</span> <span class="o">-</span> <span class="n">stime</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">difftime</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">incrementcompare</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">compares</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">incrementswap</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">swaps</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">printcomp</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">compares</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">printswap</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">swaps</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="cm">/**</span>
+
+<span class="cm">A class representing the Merge Sort algorithm for sorting a Queue of elements</span>
+
+<span class="cm">@param &lt;T&gt; The type of elements in the Queue, must implement Comparable</span>
+<span class="cm">*/</span>
+<span class="kd">class</span> <span class="nc">Merge</span><span class="o">&lt;</span><span class="n">T</span> <span class="kd">extends</span> <span class="n">Comparable</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span> <span class="kd">extends</span> <span class="n">Sorter</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="p">{</span>
+
+    <span class="cm">/**</span>
+<span class="cm">    </span>
+<span class="cm">    Creates a new instance of Merge Sort</span>
+<span class="cm">    */</span>
+    <span class="kd">public</span> <span class="nf">Merge</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">super</span><span class="p">(</span><span class="s">&quot;Merge Sort&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="cm">/**</span>
+<span class="cm">    </span>
+<span class="cm">    Sorts the given Queue of elements using Merge Sort algorithm</span>
+<span class="cm">    @param q The Queue of elements to be sorted</span>
+<span class="cm">    @param verbose A boolean indicating whether to print out the sorting process or not</span>
+<span class="cm">    @return The sorted Queue of elements</span>
+<span class="cm">    */</span>
+    <span class="kd">public</span> <span class="n">Queue</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">sort</span><span class="p">(</span><span class="n">Queue</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">q</span><span class="p">,</span> <span class="kt">boolean</span> <span class="n">verbose</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">super</span><span class="p">.</span><span class="na">start</span><span class="p">();</span>
+    <span class="n">q</span><span class="p">.</span><span class="na">setHead</span><span class="p">(</span><span class="n">mergeSort</span><span class="p">(</span><span class="n">q</span><span class="p">.</span><span class="na">getHead</span><span class="p">()));</span>
+    <span class="kd">super</span><span class="p">.</span><span class="na">end</span><span class="p">();</span>
+    <span class="k">return</span> <span class="n">q</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">private</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">mergeSort</span><span class="p">(</span><span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">head</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Base case: if the linked list is empty or has only one element</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">head</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="n">head</span><span class="p">.</span><span class="na">getNext</span><span class="p">()</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">head</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="c1">// Find the middle node of the linked list</span>
+    <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">middle</span> <span class="o">=</span> <span class="n">getMiddle</span><span class="p">(</span><span class="n">head</span><span class="p">);</span>
+    <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">nextOfMiddle</span> <span class="o">=</span> <span class="n">middle</span><span class="p">.</span><span class="na">getNext</span><span class="p">();</span>
+    <span class="n">middle</span><span class="p">.</span><span class="na">setNext</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+    
+    <span class="c1">// Recursively sort the left and right halves of the linked list</span>
+    <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">left</span> <span class="o">=</span> <span class="n">mergeSort</span><span class="p">(</span><span class="n">head</span><span class="p">);</span>
+    <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">right</span> <span class="o">=</span> <span class="n">mergeSort</span><span class="p">(</span><span class="n">nextOfMiddle</span><span class="p">);</span>
+    
+    <span class="c1">// Merge the two sorted halves of the linked list</span>
+    <span class="k">return</span> <span class="n">merge</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">);</span>
+    <span class="p">}</span>
+    
+    <span class="kd">private</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">getMiddle</span><span class="p">(</span><span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">head</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Base case: if the linked list is empty</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">head</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">head</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="c1">// Initialize two pointers: slow and fast</span>
+    <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">slow</span> <span class="o">=</span> <span class="n">head</span><span class="p">;</span>
+    <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">fast</span> <span class="o">=</span> <span class="n">head</span><span class="p">;</span>
+    
+    <span class="c1">// Traverse the linked list using two pointers:</span>
+    <span class="c1">// slow moves one node at a time, while fast moves two nodes at a time</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">fast</span><span class="p">.</span><span class="na">getNext</span><span class="p">()</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">fast</span><span class="p">.</span><span class="na">getNext</span><span class="p">().</span><span class="na">getNext</span><span class="p">()</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">slow</span> <span class="o">=</span> <span class="n">slow</span><span class="p">.</span><span class="na">getNext</span><span class="p">();</span>
+    <span class="n">fast</span> <span class="o">=</span> <span class="n">fast</span><span class="p">.</span><span class="na">getNext</span><span class="p">().</span><span class="na">getNext</span><span class="p">();</span>
+    <span class="p">}</span>
+    
+    <span class="c1">// The slow pointer is now pointing to the middle node of the linked list</span>
+    <span class="k">return</span> <span class="n">slow</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="kd">private</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">merge</span><span class="p">(</span><span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">left</span><span class="p">,</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">right</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+    
+    <span class="c1">// Base case: if one of the linked lists is empty, return the other one</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">left</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">right</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="k">if</span> <span class="p">(</span><span class="n">right</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">left</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="c1">// Compare the first nodes of the left and right linked lists,</span>
+    <span class="c1">// and recursively merge the remaining halves until all nodes are merged</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">left</span><span class="p">.</span><span class="na">getData</span><span class="p">().</span><span class="na">compareTo</span><span class="p">(</span><span class="n">right</span><span class="p">.</span><span class="na">getData</span><span class="p">())</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">left</span><span class="p">;</span>
+            <span class="n">result</span><span class="p">.</span><span class="na">setNext</span><span class="p">(</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span><span class="p">.</span><span class="na">getNext</span><span class="p">(),</span> <span class="n">right</span><span class="p">));</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">right</span><span class="p">;</span>
+            <span class="n">result</span><span class="p">.</span><span class="na">setNext</span><span class="p">(</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">.</span><span class="na">getNext</span><span class="p">()));</span>
+        <span class="p">}</span>
+
+        <span class="kd">super</span><span class="p">.</span><span class="na">incrementswap</span><span class="p">();</span>
+        <span class="kd">super</span><span class="p">.</span><span class="na">incrementcompare</span><span class="p">();</span>
+
+        <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Tester</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">double</span> <span class="nf">calcAvg</span><span class="p">(</span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Double</span><span class="o">&gt;</span> <span class="n">arr</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">double</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">arr</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span> <span class="p">{</span>
+            <span class="k">for</span> <span class="p">(</span><span class="n">Double</span> <span class="n">i</span> <span class="p">:</span> <span class="n">arr</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">sum</span> <span class="o">+=</span> <span class="n">i</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">return</span> <span class="n">sum</span> <span class="o">/</span> <span class="n">arr</span><span class="p">.</span><span class="na">size</span><span class="p">();</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">sum</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span> <span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">Sorter</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;&gt;</span> <span class="n">sorters</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Sorter</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;&gt;</span><span class="p">();</span>
+        <span class="n">sorters</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span> <span class="n">Merge</span><span class="o">&lt;&gt;</span><span class="p">());</span>
+        <span class="kt">int</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">5000</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">Sorter</span> <span class="n">i</span> <span class="p">:</span> <span class="n">sorters</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">test</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Double</span><span class="o">&gt;</span> <span class="n">elapsed</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Double</span><span class="o">&gt;</span><span class="p">();</span>
+            <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Double</span><span class="o">&gt;</span> <span class="n">comp</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Double</span><span class="o">&gt;</span><span class="p">();</span>
+            <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Double</span><span class="o">&gt;</span> <span class="n">swap</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Double</span><span class="o">&gt;</span><span class="p">();</span>
+            <span class="k">while</span> <span class="p">(</span><span class="n">test</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
+                <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">size</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="kt">int</span> <span class="n">rand</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="n">Math</span><span class="p">.</span><span class="na">floor</span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">*</span> <span class="n">size</span> <span class="o">*</span> <span class="mi">10</span><span class="p">);</span>
+                    <span class="n">arr</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">rand</span><span class="p">);</span>
+                <span class="p">}</span>
+                <span class="n">Queue</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">q</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Queue</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+                <span class="n">q</span><span class="p">.</span><span class="na">addList</span><span class="p">(</span><span class="n">arr</span><span class="p">.</span><span class="na">toArray</span><span class="p">(</span><span class="k">new</span> <span class="n">Integer</span><span class="o">[</span><span class="n">size</span><span class="o">]</span><span class="p">));</span>
+                <span class="n">i</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">q</span><span class="p">);</span>
+                <span class="n">elapsed</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="na">elapsedtime</span><span class="p">());</span>
+                <span class="n">comp</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span> <span class="n">Double</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="na">printcomp</span><span class="p">()));</span>
+                <span class="n">swap</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span> <span class="n">Double</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="na">printswap</span><span class="p">()));</span>
+                <span class="n">test</span><span class="o">++</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="na">name</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Average Elapsed time: %.10fs\n&quot;</span><span class="p">,</span> <span class="n">calcAvg</span><span class="p">(</span><span class="n">elapsed</span><span class="p">)</span><span class="o">/</span><span class="mi">1000000000</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Average Number of compares: %.2f\n&quot;</span><span class="p">,</span> <span class="n">calcAvg</span><span class="p">(</span><span class="n">comp</span><span class="p">));</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Average Number of swaps: %.2f\n&quot;</span><span class="p">,</span> <span class="n">calcAvg</span><span class="p">(</span><span class="n">swap</span><span class="p">));</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+        <span class="p">}</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">Tester</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Merge Sort
+Average Elapsed time: 0.0012691988s
+Average Number of compares: 579930.45
+Average Number of swaps: 579930.45
+
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Binary-Search-Hack-#1">Binary Search Hack #1<a class="anchor-link" href="#Binary-Search-Hack-#1"> </a></h1><p>Given an int array[] = {1, 3, 5, 7, 9, 23, 45, 67}, search the number 45 and give it's index with Binary search, BUT do this using recursion. Make sure to include informative comments to explain the code as you write the algorithm.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">BinarySearch</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="nf">search</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">array</span><span class="p">,</span> <span class="kt">int</span> <span class="n">left</span><span class="p">,</span> <span class="kt">int</span> <span class="n">right</span><span class="p">,</span> <span class="kt">int</span> <span class="n">target</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// if left index is greater than right or left index is greater than largest index, stop running and return -1</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">left</span> <span class="o">&lt;=</span> <span class="n">right</span> <span class="o">&amp;&amp;</span> <span class="n">left</span> <span class="o">&lt;</span> <span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// get mid index</span>
+            <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="n">left</span><span class="o">+</span><span class="p">(</span><span class="n">right</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">target</span> <span class="o">==</span> <span class="n">array</span><span class="o">[</span><span class="n">mid</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span>
+                <span class="c1">// return index if target is found</span>
+                <span class="k">return</span> <span class="n">mid</span><span class="p">;</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">target</span> <span class="o">&lt;</span> <span class="n">array</span><span class="o">[</span><span class="n">mid</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span>
+                <span class="c1">// update index to the left and run search again </span>
+                <span class="k">return</span> <span class="n">search</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">left</span><span class="p">,</span> <span class="n">mid</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">target</span><span class="p">);</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">target</span> <span class="o">&gt;</span> <span class="n">array</span><span class="o">[</span><span class="n">mid</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span>
+                <span class="c1">// update index to the right and run search again</span>
+                <span class="k">return</span> <span class="n">search</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">mid</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">target</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">search</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">array</span><span class="p">,</span> <span class="kt">int</span> <span class="n">target</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">search</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">target</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">BinarySearch</span> <span class="n">binary</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BinarySearch</span><span class="p">();</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">array</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">67</span><span class="p">};</span>
+        <span class="kt">int</span> <span class="n">index</span> <span class="o">=</span> <span class="n">binary</span><span class="p">.</span><span class="na">search</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="mi">45</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">index</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">BinarySearch</span><span class="p">.</span><span class="na">main</span><span class="p">();</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>6
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Binary-Search-Hack-#2">Binary Search Hack #2<a class="anchor-link" href="#Binary-Search-Hack-#2"> </a></h1><p>Given an unsorted array of int[] array = {5, 6, 3, 1, 8, 9, 4, 7, 2}, use merge sort as taught previously and combine learning with this lesson to implement a binary search to find index of the number 7. (0.15 points)</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">UnsortedSearch</span> <span class="p">{</span>
+    <span class="kt">void</span> <span class="nf">merge</span><span class="p">(</span><span class="kt">int</span> <span class="n">arr</span><span class="o">[]</span><span class="p">,</span> <span class="kt">int</span> <span class="n">l</span><span class="p">,</span> <span class="kt">int</span> <span class="n">m</span><span class="p">,</span> <span class="kt">int</span> <span class="n">r</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">n1</span> <span class="o">=</span> <span class="n">m</span> <span class="o">-</span> <span class="n">l</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">n2</span> <span class="o">=</span> <span class="n">r</span> <span class="o">-</span> <span class="n">m</span><span class="p">;</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">L</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">n1</span><span class="o">]</span><span class="p">;</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">R</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">n2</span><span class="o">]</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n1</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+            <span class="n">L</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">l</span> <span class="o">+</span> <span class="n">i</span><span class="o">]</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n2</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span>
+            <span class="n">R</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">m</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">j</span><span class="o">]</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">l</span><span class="p">;</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">n1</span> <span class="o">&amp;&amp;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n2</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">L</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">&lt;=</span> <span class="n">R</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">L</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+                <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">else</span> <span class="p">{</span>
+                <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">R</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
+                <span class="n">j</span><span class="o">++</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="n">k</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">n1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">L</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+            <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+            <span class="n">k</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">j</span> <span class="o">&lt;</span> <span class="n">n2</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">R</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
+            <span class="n">j</span><span class="o">++</span><span class="p">;</span>
+            <span class="n">k</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sort</span><span class="p">(</span><span class="kt">int</span> <span class="n">arr</span><span class="o">[]</span><span class="p">,</span> <span class="kt">int</span> <span class="n">l</span><span class="p">,</span> <span class="kt">int</span> <span class="n">r</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">l</span> <span class="o">&lt;</span> <span class="n">r</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="n">l</span> <span class="o">+</span> <span class="p">(</span><span class="n">r</span> <span class="o">-</span> <span class="n">l</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+            <span class="n">sort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">mid</span><span class="p">);</span>
+            <span class="n">sort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">r</span><span class="p">);</span>
+            <span class="n">merge</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">mid</span><span class="p">,</span> <span class="n">r</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">sort</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">array</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">array</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="nf">search</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">array</span><span class="p">,</span> <span class="kt">int</span> <span class="n">target</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">BinarySearch</span> <span class="n">search</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BinarySearch</span><span class="p">();</span>
+        <span class="k">return</span> <span class="n">search</span><span class="p">.</span><span class="na">search</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">target</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">UnsortedSearch</span> <span class="n">search</span> <span class="o">=</span> <span class="k">new</span> <span class="n">UnsortedSearch</span><span class="p">();</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">array</span> <span class="o">=</span> <span class="p">{</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">};</span>
+        <span class="kt">int</span> <span class="n">index</span> <span class="o">=</span> <span class="n">search</span><span class="p">.</span><span class="na">search</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="mi">7</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">index</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">UnsortedSearch</span><span class="p">.</span><span class="na">main</span><span class="p">();</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>7
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/fastpages/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://willcyber.github.io/fastpages/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/fastpages/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
