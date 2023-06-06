@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Trimester 3 Work Log",
-            "content": "5/21 . researched different types of recommendation systems - 1 hour | . 5/22 . played around code from online that recommends different stuff - 1 hour | . 5/24 . tried to use matrix factorization to solve the problem of too little likes - 1 hour | . 5/25 . tried to use cosine similarity to get similar songs based on songs - 1 hour | . 5/26 . read a lot of articles on content based filtering and how to use user and song features for recommendations - 2 hours | . 5/28 . read multiple articles with examples that uses cosine similarity - 1 hour | battling against the memory error when trying to use cosine similarity in python- 1 hour | finished up cosine similarity as a recommendation system that recommends n songs from an input of songs - 3 hours | . 5/31 . looked for datasets that could be used to connect user features to songs since we don&#39;t have enough users and data ourselves - 15 minutes | downloaded and analyzed the dataset that I found - 15 minutes | data processing and training an ANN to predict user ratings for certain genres - 5 hours | connected this recommendation system that uses user features to the one that uses song features - 2 hour | . 6/4 . blog on my content based recommendation system - 2 hour | . Total Hours: 20 hours 30 minutes .",
+            "content": "5/21 . researched different types of recommendation systems - 1 hour | . 5/22 . played around code from online that recommends different stuff - 1 hour | . 5/24 . tried to use matrix factorization to solve the problem of too little likes - 1 hour | . 5/25 . tried to use cosine similarity to get similar songs based on songs - 1 hour | . 5/26 . read a lot of articles on content based filtering and how to use user and song features for recommendations - 2 hours | . 5/28 . read multiple articles with examples that uses cosine similarity - 1 hour | battling against the memory error when trying to use cosine similarity in python- 1 hour | finished up cosine similarity as a recommendation system that recommends n songs from an input of songs - 3 hours | . 5/31 . looked for datasets that could be used to connect user features to songs since we don&#39;t have enough users and data ourselves - 15 minutes | downloaded and analyzed the dataset that I found - 15 minutes | data processing and training an ANN to predict user ratings for certain genres - 5 hours | connected this recommendation system that uses user features to the one that uses song features - 2 hour | . 6/6 . blog on my content based recommendation system - 2 hour | . Total Hours: 20 hours 30 minutes .",
             "url": "https://willcyber.github.io/fastpages/2023/06/06/PBLHoursLog.html",
             "relUrl": "/2023/06/06/PBLHoursLog.html",
             "date": " • Jun 6, 2023"
@@ -25,7 +25,7 @@
     
         ,"post2": {
             "title": "ML Blog",
-            "content": "",
+            "content": "work in progress .",
             "url": "https://willcyber.github.io/fastpages/2023/06/04/recsysmlblog.html",
             "relUrl": "/2023/06/04/recsysmlblog.html",
             "date": " • Jun 4, 2023"
