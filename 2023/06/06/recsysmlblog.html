@@ -81,7 +81,193 @@ window.onload = wrap_img;
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="work-in-progress">work in progress<a class="anchor-link" href="#work-in-progress"> </a></h1>
+<h1 id="Ways-to-recommend-songs-based-on-song-features">Ways to recommend songs based on song features<a class="anchor-link" href="#Ways-to-recommend-songs-based-on-song-features"> </a></h1><p>To calculate similar songs based on features of a given song, we used the data available <a href="https://www.kaggle.com/datasets/vatsalmavani/spotify-dataset">here</a>.
+Note: This dataset appears to only have data for songs up to 2021 or 2022.
+Some options (that I found) that calculates distances between songs are:</p>
+<ul>
+<li>Cosine similarity</li>
+<li>Manhattan distance</li>
+<li>Euclidean distance</li>
+<li>Minkowski distance
+I decided to use cosine similarity because cosine similarity calculates the angle, or how vectors are pointed relatively to each other. Therefore, even though songs can be very different in magnitudes of features, as long as the features together points to a similar direction, these songs can still be very similar and recommended. Cosine similarity also ignores 0 to 0 matches and seems to be very popular in recommendation systems. Though this might only be true for text analysis since magnitudes are usually very different in that. Regardless, I used cosine similarity even though a distance measurement that uses magnitude might actually be better here since the values are already on a scale of 0-1</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>I decided to use the features acousticness, danceability, duration_ms, energy, instrumentalness, key, liveness, loudness, mode, speechiness, tempo, and valence to calculate the distances between songs</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">feature_cols</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;acousticness&#39;</span><span class="p">,</span> <span class="s1">&#39;danceability&#39;</span><span class="p">,</span> <span class="s1">&#39;duration_ms&#39;</span><span class="p">,</span> <span class="s1">&#39;energy&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;instrumentalness&#39;</span><span class="p">,</span> <span class="s1">&#39;key&#39;</span><span class="p">,</span> <span class="s1">&#39;liveness&#39;</span><span class="p">,</span> <span class="s1">&#39;loudness&#39;</span><span class="p">,</span> <span class="s1">&#39;mode&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;speechiness&#39;</span><span class="p">,</span> <span class="s1">&#39;tempo&#39;</span><span class="p">,</span> <span class="s1">&#39;valence&#39;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Cosine similarity here calculates distances between each song's vector of features and creates a matrix of song to song distances</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To begin, we should standardize all the values within each feature so the data are represented better relatively to other data and thus the distances can be calculated more accurately</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">MinMaxScaler</span>
+<span class="n">scaler</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">()</span>
+<span class="n">normalized_df</span> <span class="o">=</span><span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">feature_cols</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We should clear all duplicates for obvious reasons</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">indices</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now we create a function that returns the top <em>n</em> songs given song <em>name</em></p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cosine</span> <span class="o">=</span> <span class="n">cosine_similarity</span><span class="p">(</span><span class="n">normalized_df</span><span class="p">)</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Purpose: Function for song recommendations </span>
+<span class="sd">Inputs: song title, number of recommendations to give, and type of similarity model</span>
+<span class="sd">Output: list of recommended songs</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="k">def</span> <span class="nf">generate_recommendation</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">model_type</span><span class="o">=</span><span class="n">cosine</span><span class="p">):</span>
+    <span class="c1"># Get song indices</span>
+    <span class="n">index</span><span class="o">=</span><span class="n">indices</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+    <span class="c1"># Get list of songs for given songs</span>
+    <span class="n">score</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="n">model_type</span><span class="p">[</span><span class="n">index</span><span class="p">]))</span>
+    <span class="c1"># Sort the most similar songs</span>
+    <span class="n">similarity_score</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">score</span><span class="p">,</span><span class="n">key</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">reverse</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="c1"># Select the top-n recommend songs</span>
+    <span class="n">similarity_score</span> <span class="o">=</span> <span class="n">similarity_score</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">top_songs_index</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">similarity_score</span><span class="p">]</span>
+    <span class="c1"># Top 10 recommended songs</span>
+    <span class="n">top_songs</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">top_songs_index</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">top_songs</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><em>cosine = cosine_similarity(normalized_df)</em> creates the similarity matrix and the function gets the list of cosine similarity distances in relation to other songs. We then sort the list in relation to the similarity score (x[1]) then recommend 1 to n+1 which is the top n songs since 0 is just the same song (best similarity score). The n songs are then returned</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note: Due to a memory problem when using cosine similarity on sparse matrixes, I limited the number of songs that we will calculate the similarity matrix with to the top 30,000 most popular songs</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Next we just implement this function in our api and the song feature part of the content based recommendation system is good to go</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Recommending-songs-based-on-user-features">Recommending songs based on user features<a class="anchor-link" href="#Recommending-songs-based-on-user-features"> </a></h1><p>A difficulty in doing this is find how user features affect song preferences as we don't have any/enough data on our website. Therefore, we had to, again, get the necessary data from <a href="https://www.kaggle.com/datasets/miroslavsabo/young-people-survey?select=responses.csv">somewhere else</a>. I decided to try and predict what genres users would like based on their demographics.
+I chose to use a simple ANN to try and predict how much they would enjoy each genre using their age, gender, location, education, height, weight, and number of siblings.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The link to the jupyter notebook that trained and saved the model is <a href="https://github.com/Lychee80/fourWsBackend/blob/main/genrepred.ipynb">https://github.com/Lychee80/fourWsBackend/blob/main/genrepred.ipynb</a> or <a href="https://aidanywu.github.io/fastpages/2023/06/06/genrepred.html">https://aidanywu.github.io/fastpages/2023/06/06/genrepred.html</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>However, the accuracy of this model is not very good so there are definitely better ways to model this or we could've used the data in a different way. For examples, it might've been better to use a neural network to classify and give probability of user liking the genre with a rating of 4 or 5 classified as like and 1-3 classified as not like. Height, weight, education, and number of siblings also likely does not affect genre preference significantly so we could've eliminated that as an predictor.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>After saving the model, we just had to access the model in the api and use it to make decisions about song recommendations in regards to the prediction of what genres the user would like.</p>
+
 </div>
 </div>
 </div>
